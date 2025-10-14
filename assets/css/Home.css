@@ -140,42 +140,92 @@
   transform: translateY(6px);
 }
 
-/* CTA buttons */
-.banner-buttons {
-  margin-top: 44px;
+.btn-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
 }
-
-.banner-buttons a {
-  display: inline-block;
-  border-radius: 28px;
-  padding: 12px 32px;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all .22s ease;
-  color: #fff;
-}
-
-/* outline */
+/* === BUTTON BASE === */
 .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  /* space between text and icon */
   border: 1.6px solid rgba(255, 255, 255, 0.75);
   background: transparent;
+  color: #fff;
+  border-radius: 28px;
+  padding: 12px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
   backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
+  /* ensures icon stays inside */
 }
 
+/* === HOVER STYLE FOR BUTTON === */
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.95);
   color: #009444;
 }
 
-/* filled */
-.btn-filled {
-  background: #000;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+/* === ICON INSIDE BUTTON === */
+.btn-outline .seven-symbol {
+  width: 22px;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  transform-origin: center;
+  display: none;
 }
 
-.btn-filled:hover {
-  background: #009444;
+/* === HOVER ANIMATION === */
+.btn-outline:hover .seven-symbol {
+  transform: rotate(5deg);
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 120, 0.6));
+  width: 15px;
+}
+
+/* filled */
+.btn-filled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  /* space between text and icon */
+  border: 1.6px solid rgba(255, 255, 255, 0.75);
+  background: #000;
+  color: #fff;
+  border-radius: 28px;
+  padding: 12px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
+  /* ensures icon stays inside */
+}
+
+/* === ICON INSIDE BUTTON === */
+.btn-filled .seven-symbol {
+  width: 22px;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  transform-origin: center;
+  display: none;
+}
+
+
+.btn-filled:hover .seven-symbol {
+  transform: rotate(5deg);
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 120, 0.6));
+  width: 15px;
 }
 
 .banner-circular-bg {
