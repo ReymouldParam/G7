@@ -1,7 +1,7 @@
 // Header Effect 
 $(document).ready(function () {
     const header = $(".main-header");
-    const stickOffset = 20;
+    const stickOffset = 50;
     // Distance From Top before header sticks
 
     $(window).on("scroll", function () {

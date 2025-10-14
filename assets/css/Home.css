@@ -487,23 +487,19 @@ section {
 .our-pinstripes {
   position: absolute;
   inset: 36px;
+  /* controls stripe padding inside the section */
   border-radius: 45px;
   z-index: 20;
+  /* sits below text but above background */
   pointer-events: none;
-  /* === STRONGER STRIPES === */
+  /* ensures it doesn’t block clicks */
   background-image: repeating-linear-gradient(to right,
       rgba(255, 255, 255, 0.15) 0px,
-      /* more opaque = more visible */
-      rgba(255, 255, 255, 0.15) 4px,
-      /* thicker lines */
-      transparent 4px,
-      transparent 18px
-      /* more spacing = cleaner look */
-    );
-  mix-blend-mode: soft-light;
-  /* softer but brighter than 'overlay' */
-  opacity: 0.95;
-  /* overall intensity */
+      rgba(255, 255, 255, 0.15) 3px,
+      transparent 3px,
+      transparent 16px);
+  mix-blend-mode: overlay;
+  opacity: 0.98;
 }
 
 .benefit-container {
@@ -621,47 +617,75 @@ section {
   }
 }
 
-/* Clinets Section */
+/* === CLIENTS SECTION === */
 .clients-section {
   text-align: center;
-  padding-bottom: 25px;
+  padding: 20px 0;
   margin-top: -125px;
+  position: relative;
+  overflow: hidden;
 }
 
 .clients-section h2 {
   font-size: 32px;
   font-weight: 600;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  margin-top: 0;
 }
 
-.client-logos {
+/* === MARQUEE WRAPPER === */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* === MARQUEE TRACK (ANIMATED STRIP) === */
+.marquee-track {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 40px;
+  gap: 30px;
+  animation: scroll 20s linear infinite;
+  width: max-content;
 }
 
+/* === ANIMATION === */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* === LOGO BOX === */
 .logo-box {
-  flex: 1 1 200px;
-  max-width: 350px;
-  height: 200px;
+  flex: 0 0 220px;
+  height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: bold;
   color: #fff;
   background: linear-gradient(180deg, #0d8040, #1d643e);
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
+  border-radius: 12px;
 }
 
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .logo-box {
-    height: 120px;
-    font-size: 20px;
+    height: 100px;
+    flex: 0 0 140px;
+    font-size: 16px;
+  }
+
+  .marquee-track {
+    gap: 20px;
+    animation: scroll 15s linear infinite;
   }
 }
 
