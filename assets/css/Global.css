@@ -26,7 +26,7 @@ body {
     /* quickly visible page bg while developing */
 }
 
-/* header positioning */
+/* === HEADER TRANSITION === */
 .main-header {
     position: absolute;
     top: 10%;
@@ -34,13 +34,30 @@ body {
     transform: translateX(-50%);
     width: 52%;
     background: var(--header-bg);
-    border-radius: var(--header-radius);
+    border-radius: 14px;
     padding: 14px 26px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     z-index: 120;
+    transition: all 0.5s ease;
+    /* Smooth transition */
+}
+
+/* When sticky (after scroll) */
+.main-header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    background: var(--header-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    padding: 18px 60px;
+    z-index: 200;
+    justify-content: space-around;
 }
 
 /* logo container */

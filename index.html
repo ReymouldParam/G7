@@ -58,6 +58,8 @@
 
     <!-- ===== WHO WE ARE SECTION ===== -->
     <section class="who-we-are">
+        <!-- Pinstripe overlay -->
+        <div class="about-pinstripes"></div>
         <div class="who-container">
             <div class="who-text">
                 <h2>Who <span>We Are</span></h2>
@@ -69,7 +71,7 @@
                 <a href="#" class="explore-btn">Explore</a>
             </div>
             <div class="who-logo">
-                <img src="assets/IMAGES/G7-logo.svg" alt="G7 Logo" />
+                <img src="assets/IMAGES/About -Us-img.png" alt="G7 Logo" />
             </div>
         </div>
     </section>
@@ -79,40 +81,58 @@
         <h2>Our <span>Services</span></h2>
         <div class="services-container">
             <div class="services-list">
-                <div class="service-box active">
-                    <h3>Virtual CFO Services</h3>
-                    <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
+                <div class="service-box active" data-service="Cfo">
+                    <div>
+                        <h3>Virtual CFO Services</h3>
+                        <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
+                    </div>
                     <div class="service-icon">
-                        <img src="assets/IMAGES/cfo-icon.svg" alt="Icon" />
+                        <img src="assets/IMAGES/service-icon1.png" alt="Icon" />
                     </div>
                 </div>
-                <div class="service-box">
-                    <h3>Business Support Services</h3>
-                    <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
+                <div class="service-box" data-service="Bussiness">
+                    <div>
+                        <h3>Business Support Services</h3>
+                        <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
+                    </div>
+                    <div class="service-icon">
+                        <img src="assets/IMAGES/service-icon1.png" alt="Icon" />
+                    </div>
                 </div>
-                <div class="service-box">
-                    <h3>Entity Restructuring Services</h3>
-                    <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
+                <div class="service-box" data-service="Entity">
+                    <div>
+                        <h3>Entity Restructuring Services</h3>
+                        <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
+                    </div>
+                    <div class="service-icon">
+                        <img src="assets/IMAGES/service-icon1.png" alt="Icon" />
+                    </div>
                 </div>
-                <div class="service-box">
-                    <h3>Fund Raising</h3>
-                    <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
+                <div class="service-box" data-service="Fund">
+                    <div>
+                        <h3>Fund Raising</h3>
+                        <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
+                    </div>
+                    <div class="service-icon">
+                        <img src="assets/IMAGES/service-icon1.png" alt="Icon" />
+                    </div>
                 </div>
             </div>
             <div class="services-image">
-                <img src="assets/IMAGES/finance-man.png" alt="Finance Image" />
-                <p>
-                    The Primary Role Of A Chief Financial Officer In Any Organization Is To Oversee The Financial
-                    Planning, Maintain And Report On The Financial Activities And Manage Financial Risk Of The
-                    Business.
-                </p>
+                <div class="service-content active" data-service="Cfo">
+                    <img src="assets/IMAGES/Services-Container-img1.png" alt="Finance Image" />
+                    <p>...text...</p>
+                </div>
                 <div class="arrow-indicator">➜</div>
             </div>
+
         </div>
     </section>
 
     <!-- ===== HOW YOU WILL BENEFIT SECTION ===== -->
     <section class="how-benefit">
+        <!-- Pinstripe overlay -->
+        <div class="our-pinstripes"></div>
         <div class="benefit-container">
             <div class="benefit-text">
                 <h2>How Will You <span>Benefit</span></h2>
@@ -123,15 +143,30 @@
                 </p>
                 <a href="#" class="explore-btn">Explore</a>
             </div>
+
+            <!-- Moving icons & text overlay -->
             <div class="benefit-icon">
-                <div class="icon-wrapper">
-                    <img src="assets/IMAGES/lightbulb.svg" alt="Idea" />
-                    <span class="client-badge">Client Insights</span>
+                <div class="icon-track">
+                    <div class="icon-wrapper"><img src="assets/IMAGES/service-icon1.png" alt=""></div>
+                    <div class="icon-wrapper"><img src="assets/IMAGES/service-icon1.png" alt=""></div>
+                    <div class="icon-wrapper"><img src="assets/IMAGES/service-icon1.png" alt=""></div>
+                    <div class="icon-wrapper"><img src="assets/IMAGES/service-icon1.png" alt=""></div>
+                    <!-- duplicate once for smooth infinite loop -->
+                    <div class="icon-wrapper"><img src="assets/IMAGES/service-icon1.png" alt=""> </div>
+                    <div class="icon-wrapper"><img src="assets/IMAGES/service-icon1.png" alt=""></div>
+                </div>
+
+                <div class="text-track">
+                    <span class="benefit-badge">Increased Efficiency</span>
+                    <span class="benefit-badge">Client Insights</span>
+                    <span class="benefit-badge">Faster Reporting</span>
+                    <span class="benefit-badge">Scalable Growth</span>
+                    <span class="benefit-badge">Increased Efficiency</span>
+                    <span class="benefit-badge">Client Insights</span>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Our Clients Section -->
     <section class="clients-section">
         <h2>Our Clients</h2>
@@ -142,7 +177,6 @@
             <div class="logo-box">LOGO</div>
         </div>
     </section>
-
     <!-- Get In Touch Section -->
     <section class="get-in-touch">
         <h2>Get In Touch</h2>
@@ -183,32 +217,10 @@
             </div>
         </footer>
     </section>
-
-
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script>
-        $(function () {
-            const phrases = [
-                "Business Clarity",
-                "Financial Clarity",
-                "Career Clarity",
-                "Growth Clarity"
-            ];
-            let idx = 0;
-            const $span = $(".clarity-animated");
-            const duration = 5000; // 5 seconds: smooth, professional
-
-            function nextText() {
-                $span.css({ animation: 'none', opacity: 0 }).text(phrases[idx]);
-                void $span[0].offsetWidth;
-                $span.css({
-                    animation: `claritySlide ${duration}ms cubic-bezier(.71,0,.18,1) forwards`
-                });
-                idx = (idx + 1) % phrases.length;
-                setTimeout(nextText, duration);
-            }
-            nextText();
-        });
+    <script src="assets/Jquery/home.js">
+    </script>
+    <script src="assets/Jquery/Global.js">
     </script>
 </body>
 

@@ -286,6 +286,7 @@ section {
   overflow: hidden;
   z-index: 2;
   transform: translateY(120px);
+  position: relative;
 
 }
 
@@ -294,6 +295,25 @@ section {
   justify-content: space-between;
   align-items: center;
   height: 300px;
+}
+
+/* === PINSTRIPE OVERLAY === */
+.about-pinstripes {
+  position: absolute;
+  inset: 36px;
+  /* controls stripe padding inside the section */
+  border-radius: 45px;
+  z-index: 20;
+  /* sits below text but above background */
+  pointer-events: none;
+  /* ensures it doesn’t block clicks */
+  background-image: repeating-linear-gradient(to right,
+      rgba(255, 255, 255, 0.15) 0px,
+      rgba(255, 255, 255, 0.15) 3px,
+      transparent 3px,
+      transparent 16px);
+  mix-blend-mode: overlay;
+  opacity: 0.98;
 }
 
 .who-text h2 {
@@ -341,6 +361,7 @@ section {
   /* max-width: 1200px; */
   margin: 80px auto;
   z-index: 1;
+  position: relative;
 }
 
 .our-services h2 {
@@ -366,18 +387,33 @@ section {
 
 .service-box {
   background: #1a1c1d;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   padding: 20px;
   margin-bottom: 15px;
   border: 1px solid #2a2a2a;
   color: #aaa;
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+
 }
 
 .service-box h3 {
   color: #ddd;
   margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.service-box p {
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 400;
+
 }
 
 .service-box.active,
@@ -387,25 +423,33 @@ section {
   color: #fff;
 }
 
+
 .service-box .service-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  height: 100%;
+  margin-top: 0;
 }
+
+.service-icon img {
+  height: 60px;
+}
+
 
 .services-image {
   flex: 1;
   text-align: center;
   border: 2px solid #00ff99;
-  border-radius: 25px;
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
   padding: 20px;
   background: #111;
   position: relative;
+
 }
 
 .services-image img {
   width: 100%;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .services-image p {
@@ -413,6 +457,7 @@ section {
   color: #ccc;
   font-size: 14px;
   line-height: 1.6;
+  text-align: left;
 }
 
 .arrow-indicator {
@@ -423,22 +468,49 @@ section {
   font-size: 24px;
 }
 
+
 /* === HOW BENEFIT === */
 .how-benefit {
   background: linear-gradient(145deg, #0e1113, #101214);
   border-radius: 40px;
   box-shadow: 0 0 20px rgba(0, 255, 120, 0.40);
-  padding: 60px 80px;
+  padding: 30px 40px;
   margin: 40px auto;
   /* max-width: 1200px; */
   width: 95%;
   transform: translateY(-120px);
+  position: relative;
+  z-index: 2;
+}
+
+
+.our-pinstripes {
+  position: absolute;
+  inset: 36px;
+  border-radius: 45px;
+  z-index: 20;
+  pointer-events: none;
+  /* === STRONGER STRIPES === */
+  background-image: repeating-linear-gradient(to right,
+      rgba(255, 255, 255, 0.15) 0px,
+      /* more opaque = more visible */
+      rgba(255, 255, 255, 0.15) 4px,
+      /* thicker lines */
+      transparent 4px,
+      transparent 18px
+      /* more spacing = cleaner look */
+    );
+  mix-blend-mode: soft-light;
+  /* softer but brighter than 'overlay' */
+  opacity: 0.95;
+  /* overall intensity */
 }
 
 .benefit-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
   height: 300px;
 }
 
@@ -456,36 +528,100 @@ section {
   max-width: 500px;
 }
 
+/* ===== ICON + TEXT MARQUEE ===== */
 .benefit-icon {
   position: relative;
+  /* width: 200px;
+  height: 220px; */
+  overflow: hidden;
+  /* border-radius: 25px; */
+  /* background: #111; */
+  /* box-shadow: 0 0 20px rgba(0, 255, 120, 0.3); */
 }
 
-.icon-wrapper {
+/* --- ICON TRACK --- */
+.icon-track {
+  display: flex;
+  gap: 25px;
+  animation: moveLeft 5s linear infinite;
+  /* margin-top: 25px; */
+  width: 400px;
+}
+
+/* .icon-wrapper {
+  flex: 0 0 auto;
+  background: #1a1c1d;
   border: 2px solid #00ff99;
   border-radius: 25px;
-  padding: 20px 40px;
-  background: #111;
+  padding: 20px;
   text-align: center;
+  width: 160px;
+  height: 160px;
   box-shadow: 0 0 15px rgba(0, 255, 120, 0.3);
-}
+} */
 
 .icon-wrapper img {
-  width: 70px;
+  /* width: 100%;
+  height: 100%;
+  margin-bottom: 10px; */
+  height: 250px;
 }
 
-.client-badge {
+.icon-wrapper span {
+  display: block;
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* --- TEXT TRACK (OVERLAY) --- */
+.text-track {
   position: absolute;
-  bottom: -20px;
-  right: -20px;
+  top: 80%;
+  left: 0;
+  width: 200%;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  animation: moveRight 10s linear infinite;
+  transform: translateY(-50%);
+  pointer-events: none;
+  /* don't block hover */
+}
+
+.benefit-badge {
   background: #fff;
   color: #000;
-  font-size: 13px;
-  padding: 6px 15px;
-  border-radius: 20px;
-  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
 }
 
+/* === KEYFRAMES === */
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
 
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Clinets Section */
 .clients-section {
   text-align: center;
   padding-bottom: 25px;
