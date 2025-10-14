@@ -12,3 +12,14 @@ $(document).ready(function () {
         }
     });
 });
+
+// Mobile header 
+const mobileToggle = document.querySelector('.mobile-menu-toggle');
+const header = document.querySelector('.main-header');
+
+mobileToggle.addEventListener('click', () => {
+    header.classList.toggle('nav-open');
+
+    // Animate the hamburger into an X
+    mobileToggle.classList.toggle('open');
+});

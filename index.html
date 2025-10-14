@@ -9,15 +9,17 @@
     <!-- Separate CSS files -->
     <link rel="stylesheet" href="assets/css/Global.css" />
     <link rel="stylesheet" href="assets/css/Home.css" />
+    <link rel="stylesheet" href="assets/css/responsiveness.css" />
 </head>
 
 <body>
-    <!-- ===== HEADER ===== -->
+    <!-- Header -->
     <header class="main-header">
         <div class="logo">
             <img src="assets/IMAGES/G7-logo.svg" alt="Website Logo" />
         </div>
 
+        <!-- Desktop & Mobile Navigation -->
         <nav class="nav">
             <ul>
                 <li><a href="#" class="active">Home</a></li>
@@ -26,6 +28,13 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
     <!-- ===== BANNER ===== -->
     <section class="banner">
@@ -199,7 +208,6 @@
             </div>
         </div>
     </section>
-
     <!-- Get In Touch Section -->
     <section class="get-in-touch">
         <h2>Get In Touch</h2>

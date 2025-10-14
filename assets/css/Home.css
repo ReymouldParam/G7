@@ -739,56 +739,6 @@ section {
   }
 }
 
-/* ====== GET IN TOUCH SECTION ====== */
-.get-in-touch {
-  background-color: #0d0d0d;
-  text-align: center;
-  padding: 0px 20px;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-}
-
-.get-in-touch h2 {
-  color: #0ea64b;
-  font-size: 36px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-}
-
-.email-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.email-form input {
-  width: 400px;
-  max-width: 80%;
-  padding: 15px;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-}
-
-.email-form button {
-  padding: 15px 40px;
-  background: #000;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.email-form button:hover {
-  background: #0ea64b;
-}
-
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
 

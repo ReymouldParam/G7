@@ -1,0 +1,937 @@
+/* ===========================
+   RESPONSIVE STYLES
+   HD (1920px), Full HD (2560px), Tablet, Mobile
+   =========================== */
+
+/* ===========================
+   FULL HD (2560px+) 
+   =========================== */
+@media (min-width: 2560px) {
+    .banner {
+        max-width: 2400px;
+        margin: 10px auto;
+    }
+
+    .banner-content h1 {
+        font-size: 5.5rem;
+    }
+
+    .banner-content h1 span {
+        font-size: 4.8rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .main-header {
+        width: 60%;
+        padding: 18px 40px;
+    }
+
+    .main-header.sticky {
+        padding: 22px 80px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .main-header .nav a {
+        font-size: 1.1rem;
+    }
+
+    .who-we-are,
+    .how-benefit {
+        max-width: 2200px;
+        padding: 80px 100px;
+    }
+
+    .our-services {
+        max-width: 2200px;
+        padding: 80px 100px;
+    }
+
+    .who-text h2,
+    .benefit-text h2,
+    .our-services h2 {
+        font-size: 2.8rem;
+    }
+
+    .who-text p,
+    .benefit-text p {
+        font-size: 1.1rem;
+        max-width: 650px;
+    }
+
+    .service-box h3 {
+        font-size: 1.8rem;
+    }
+
+    .service-box p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===========================
+   HD (1920px) 
+   =========================== */
+@media (min-width: 1920px) and (max-width: 2559px) {
+    .banner {
+        max-width: 1800px;
+    }
+
+    .banner-content h1 {
+        font-size: 4.8rem;
+    }
+
+    .banner-content h1 span {
+        font-size: 4.2rem;
+    }
+
+    .main-header {
+        width: 58%;
+    }
+
+    .who-we-are,
+    .how-benefit {
+        max-width: 1600px;
+    }
+
+    .our-services {
+        max-width: 1600px;
+    }
+}
+
+/* ===========================
+   STANDARD DESKTOP (1440px - 1919px)
+   =========================== */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .banner {
+        width: 96%;
+    }
+
+    .main-header {
+        width: 54%;
+    }
+
+    .who-we-are,
+    .how-benefit,
+    .our-services {
+        width: 92%;
+    }
+}
+
+/* ===========================
+   LAPTOP (1024px - 1439px)
+   =========================== */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .banner {
+        width: 96%;
+    }
+
+    .banner-content h1 {
+        font-size: 3.8rem;
+    }
+
+    .banner-content h1 span {
+        font-size: 3.2rem;
+    }
+
+    .main-header {
+        width: 58%;
+        padding: 12px 20px;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .main-header .nav ul {
+        gap: 20px;
+    }
+
+    .who-we-are,
+    .how-benefit {
+        padding: 50px 60px;
+        width: 92%;
+    }
+
+    .our-services {
+        padding: 50px 60px;
+    }
+
+    .side-panel {
+        width: 16%;
+    }
+
+    .services-container {
+        gap: 35px;
+    }
+
+    .benefit-container {
+        gap: 35px;
+    }
+}
+
+/* ===========================
+   TABLET LANDSCAPE (900px - 1023px)
+   =========================== */
+@media (min-width: 900px) and (max-width: 1023px) {
+
+    .left-panel,
+    .right-panel {
+        width: 14%;
+    }
+
+    .banner .inner-frame {
+        inset: 16px;
+    }
+
+    .pinstripes {
+        inset: 16px;
+    }
+
+    .banner-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .banner-content h1 span {
+        font-size: 2.6rem;
+    }
+
+    .main-header {
+        width: 70%;
+        padding: 12px 18px;
+    }
+
+    .main-header .nav ul {
+        gap: 18px;
+    }
+
+    .who-we-are,
+    .how-benefit {
+        padding: 45px 50px;
+        width: 90%;
+    }
+
+    .our-services {
+        padding: 45px 50px;
+        margin: 60px auto;
+    }
+
+    .who-container {
+        height: auto;
+        min-height: 280px;
+    }
+
+    .benefit-container {
+        height: auto;
+        min-height: 280px;
+    }
+
+    .services-container {
+        gap: 30px;
+    }
+
+    .service-box h3 {
+        font-size: 1.4rem;
+    }
+
+    .service-box p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===========================
+   TABLET PORTRAIT (768px - 899px)
+   =========================== */
+@media (min-width: 768px) and (max-width: 899px) {
+
+    .left-panel,
+    .right-panel {
+        display: none;
+    }
+
+    .banner .inner-frame {
+        inset: 14px;
+    }
+
+    .pinstripes {
+        inset: 14px;
+    }
+
+    .banner-content {
+        max-width: 650px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .banner-content h1 span {
+        font-size: 2.3rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .main-header {
+        width: 85%;
+        padding: 12px 16px;
+    }
+
+    .main-header .nav ul {
+        gap: 15px;
+    }
+
+    .main-header .nav a {
+        font-size: 0.9rem;
+    }
+
+    .btn-wrapper {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-outline,
+    .btn-filled {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .who-we-are,
+    .how-benefit {
+        padding: 40px 35px;
+        width: 88%;
+        transform: translateY(80px);
+    }
+
+    .our-services {
+        padding: 40px 35px;
+        margin: 60px auto;
+    }
+
+    .who-container,
+    .benefit-container {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+
+    .who-text h2,
+    .benefit-text h2,
+    .our-services h2 {
+        font-size: 1.8rem;
+    }
+
+    .who-text p,
+    .benefit-text p {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .who-logo img {
+        width: 180px;
+        margin-top: 20px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .services-image {
+        width: 100%;
+    }
+
+    .benefit-icon {
+        width: 100%;
+    }
+
+    .icon-track {
+        width: 100%;
+    }
+
+    .banner-circular-bg {
+        width: 500px;
+        height: 350px;
+        bottom: -100px;
+    }
+
+    .clients-section {
+        margin-top: -80px;
+    }
+
+    .logo-box {
+        flex: 0 0 180px;
+        height: 140px;
+    }
+
+    .get-in-touch h2 {
+        font-size: 2rem;
+    }
+
+    .email-form input {
+        width: 100%;
+    }
+}
+
+/* ===========================
+   MOBILE LARGE (576px - 767px)
+   =========================== */
+@media (min-width: 576px) and (max-width: 767px) {
+    .banner {
+        width: 100%;
+        margin: 12px 0;
+        border-radius: 20px;
+        min-height: 85vh;
+    }
+
+    .banner .inner-frame {
+        inset: 12px;
+        border-radius: 18px;
+        border-top-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+    }
+
+    .pinstripes {
+        inset: 12px;
+    }
+
+    .left-panel,
+    .right-panel {
+        display: none;
+    }
+
+    .banner-content {
+        max-width: 90%;
+        padding: 0 20px;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .banner-content h1 {
+        font-size: 2.2rem;
+        margin: 8px 0 10px;
+    }
+
+    .banner-content h1 span {
+        font-size: 1.8rem;
+    }
+
+    .btn-wrapper {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .btn-outline,
+    .btn-filled {
+        width: 100%;
+        max-width: 220px;
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+
+    /* Header for mobile - will be replaced with mobile menu */
+    .main-header {
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+
+    .main-header .nav {
+        display: none;
+        /* Hidden by default, mobile menu will replace */
+    }
+
+    .who-we-are,
+    .how-benefit {
+        padding: 35px 25px;
+        width: 90%;
+        border-radius: 25px;
+        transform: translateY(60px);
+    }
+
+    .who-container,
+    .benefit-container {
+        flex-direction: column;
+        height: auto;
+        gap: 25px;
+    }
+
+    .who-text h2,
+    .benefit-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .who-text p,
+    .benefit-text p {
+        font-size: 0.9rem;
+        margin: 12px 0 20px;
+    }
+
+    .who-logo img {
+        width: 140px;
+    }
+
+    .our-services {
+        padding: 35px 25px;
+        margin: 50px auto;
+        border-radius: 25px;
+    }
+
+    .our-services h2 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-box {
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .service-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-box p {
+        font-size: 0.85rem;
+    }
+
+    .service-icon img {
+        height: 50px;
+    }
+
+    .services-image {
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .benefit-icon {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .icon-track {
+        width: 200%;
+    }
+
+    .icon-wrapper img {
+        height: 180px;
+    }
+
+    .benefit-badge {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+
+    .banner-circular-bg {
+        width: 400px;
+        height: 280px;
+        bottom: -80px;
+    }
+
+    .clients-section {
+        margin-top: -60px;
+        padding: 15px 0;
+    }
+
+    .clients-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .logo-box {
+        flex: 0 0 150px;
+        height: 110px;
+        font-size: 1rem;
+    }
+
+    .get-in-touch {
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        padding: 20px 15px;
+    }
+
+    .get-in-touch h2 {
+        font-size: 1.8rem;
+    }
+
+    .email-form {
+        flex-direction: column;
+    }
+
+    .email-form input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-item {
+        margin: 8px 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 1024px) {
+    .how-benefit {
+        padding: 25px 20px;
+        border-radius: 30px;
+        transform: translateY(-80px);
+    }
+
+    .benefit-container {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        /* allow flexible height */
+    }
+
+    .benefit-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .benefit-text p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .benefit-icon {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .icon-track {
+        gap: 15px;
+        width: max-content;
+        /* ensure proper scrolling */
+    }
+
+    .icon-wrapper img {
+        height: 150px;
+        /* smaller icons */
+        width: auto;
+    }
+
+    .text-track {
+        top: 90%;
+        gap: 20px;
+    }
+
+    .benefit-badge {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-benefit {
+        padding: 20px 15px;
+        border-radius: 25px;
+        transform: translateY(-60px);
+    }
+
+    .benefit-text h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .benefit-text p {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .benefit-container {
+        gap: 20px;
+    }
+
+    /* Make benefit-icon take full width */
+    .benefit-icon {
+        width: 100%;
+        overflow: hidden;
+        height: auto;
+        position: relative;
+    }
+
+    /* Combine icon-track and text-track scrolling */
+    .icon-track,
+    .text-track {
+        display: flex;
+        gap: 15px;
+        width: max-content;
+        animation: moveRight 12s linear infinite;
+        /* slower for mobile */
+    }
+
+    /* Adjust icon sizes */
+    .icon-wrapper img {
+        height: 120px;
+        width: auto;
+    }
+
+    /* Position text-track inline below icons */
+    .text-track {
+        position: relative;
+        /* remove absolute positioning */
+        top: 0;
+        transform: none;
+        gap: 10px;
+        align-items: center;
+        margin-left: 20px;
+        /* small spacing */
+    }
+
+    .benefit-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .how-benefit {
+        padding: 15px 10px;
+        transform: translateY(-85px);
+        border-radius: 20px;
+    }
+
+    .benefit-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .benefit-text p {
+        font-size: 12px;
+        margin: 15px 0;
+    }
+
+    .benefit-icon {
+        height: 150px;
+    }
+
+    .icon-wrapper img {
+        height: 90px;
+    }
+
+    .benefit-badge {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .icon-track,
+    .text-track {
+        gap: 10px;
+        animation: moveRight 15s linear infinite;
+        /* slower on very small screens */
+    }
+}
+
+
+/* ===========================
+   MOBILE MEDIUM (375px - 575px)
+   =========================== */
+@media (min-width: 375px) and (max-width: 575px) {
+    .banner {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 15px;
+        /* min-height: 80vh; */
+    }
+
+    .banner .inner-frame {
+        inset: 10px;
+        border-radius: 15px;
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+
+    .pinstripes {
+        inset: 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .banner-content h1 span {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+    }
+
+    .main-header {
+        width: 92%;
+        padding: 10px 12px;
+        /* margin-top: 6px; */
+
+    }
+
+    .logo img {
+        height: 26px;
+    }
+
+    .who-we-are {
+        padding: 30px 20px;
+        /* width: 92%; */
+        overflow: hidden;
+        margin-top: -80px;
+        height: 75dvh;
+        transform: translateY(92px);
+    }
+
+    .our-services {
+        padding: 30px 20px;
+    }
+
+    .who-text h2,
+    .benefit-text h2,
+    .our-services h2 {
+        font-size: 1.4rem;
+    }
+
+    .service-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .banner-circular-bg {
+        width: 350px;
+        height: 300px;
+        bottom: -145px;
+    }
+}
+
+/* ===========================
+   MOBILE SMALL (< 375px)
+   =========================== */
+@media (max-width: 374px) {
+    .banner {
+        width: 100%;
+        margin: 8px 0;
+        border-radius: 12px;
+        min-height: 75vh;
+    }
+
+    .banner .inner-frame {
+        inset: 8px;
+        border-radius: 12px;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .pinstripes {
+        inset: 8px;
+    }
+
+    .banner-content {
+        padding: 0 15px;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .banner-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .banner-content h1 span {
+        font-size: 1.4rem;
+    }
+
+    .btn-outline,
+    .btn-filled {
+        padding: 9px 18px;
+        font-size: 0.85rem;
+    }
+
+    .main-header {
+        width: 94%;
+        padding: 8px 10px;
+    }
+
+    .logo img {
+        height: 24px;
+    }
+
+    .who-we-are,
+    .how-benefit {
+        padding: 25px 18px;
+        width: 94%;
+    }
+
+    .our-services {
+        padding: 25px 18px;
+    }
+
+    .who-text h2,
+    .benefit-text h2,
+    .our-services h2 {
+        font-size: 1.3rem;
+    }
+
+    .who-text p,
+    .benefit-text p {
+        font-size: 0.85rem;
+    }
+
+    .service-box {
+        padding: 15px;
+    }
+
+    .service-box h3 {
+        font-size: 1rem;
+    }
+
+    .service-box p {
+        font-size: 0.8rem;
+    }
+
+    .banner-circular-bg {
+        width: 300px;
+        height: 220px;
+        bottom: -60px;
+    }
+
+    .clients-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .logo-box {
+        flex: 0 0 130px;
+        height: 90px;
+        font-size: 0.9rem;
+    }
+
+    .get-in-touch h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+    }
+}
