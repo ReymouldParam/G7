@@ -78,7 +78,7 @@
    =========================== */
 @media (min-width: 1920px) and (max-width: 2559px) {
     .banner {
-        max-width: 1800px;
+        /* max-width: 1800px; */
     }
 
     .banner-content h1 {
@@ -95,11 +95,11 @@
 
     .who-we-are,
     .how-benefit {
-        max-width: 1600px;
+        /* max-width: 1600px; */
     }
 
     .our-services {
-        max-width: 1600px;
+        /* max-width: 1600px; */
     }
 }
 
