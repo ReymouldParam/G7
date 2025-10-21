@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pk5ixxuh5zp9/public_html/g7.reymould.com
+    - export DEPLOYPATH=/home/pk5ixxuh5zp9/public_html/dev.g7consultancy.com
     - /bin/cp -R * $DEPLOYPATH
