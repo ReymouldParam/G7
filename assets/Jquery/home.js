@@ -118,7 +118,7 @@ $(document).ready(function () {
         const sectionTitle = section.find("h3").text().trim();
         serviceTabs.removeClass("active");
         serviceTabs.each(function () {
-            if (sectionTitle.includes($(this).text().trim())) {
+            if (sectionTitle.includes($(this).trim())) {
                 $(this).addClass("active");
             }
         });
