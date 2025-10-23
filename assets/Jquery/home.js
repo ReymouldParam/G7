@@ -22,23 +22,23 @@ $(function () {
     nextText();
 });
 
-// ****************************** Home Page Services Page Aniamtion 
+// ****************************** Home Page Services Functionality 
 $(document).ready(function () {
     const serviceData = {
         Cfo: {
-            img: "https://via.placeholder.com/500x300?text=Virtual+CFO",
+            img: "assets/IMAGES/Services-Container-img1.png",
             text: "The CFO oversees financial planning, maintains reports, and manages financial risks."
         },
         Bussiness: {
-            img: "https://via.placeholder.com/500x300?text=Business+Support",
+            img: "assets/IMAGES/Service-Container-img2.png",
             text: "Our support services streamline your business operations for productivity and scalability."
         },
         Entity: {
-            img: "https://via.placeholder.com/500x300?text=Entity+Restructuring",
+            img: "assets/IMAGES/Service-Container-img3.png",
             text: "We help organizations restructure efficiently for optimized performance and compliance."
         },
         Fund: {
-            img: "https://via.placeholder.com/500x300?text=Entity+Restructuring",
+            img: "assets/IMAGES/Service-Container-img4.png",
             text: "We help organizations restructure efficiently for optimized performance and compliance."
         },
 
@@ -101,3 +101,85 @@ $(document).ready(function () {
 
     startAutoPlay(); // Start automatically
 });
+
+// ***************************** Services Page Functionality
+$(document).ready(function () {
+    const serviceSections = $(".service-section");
+    const serviceTabs = $(".service-tab");
+    const rotateDelay = 6000; // 6 seconds
+    let currentIndex = 0;
+    let autoRotate;
+
+    // Show a section and highlight its tab
+    function showService(section) {
+        serviceSections.hide();
+        section.fadeIn(600);
+
+        const sectionTitle = section.find("h3").text().trim();
+        serviceTabs.removeClass("active");
+        serviceTabs.each(function () {
+            if (sectionTitle.includes($(this).text().trim())) {
+                $(this).addClass("active");
+            }
+        });
+    }
+
+    // Get visible sections for rotation
+    function getVisibleSections() {
+        return serviceSections.filter(":visible");
+    }
+
+    // Auto-rotate through visible sections
+    function rotateServices() {
+        const visibleSections = getVisibleSections();
+        if (visibleSections.length <= 1) return; // No rotation if only one visible
+
+        currentIndex = (currentIndex + 1) % visibleSections.length;
+        showService(visibleSections.eq(currentIndex));
+    }
+
+    function startRotation() {
+        stopRotation();
+        autoRotate = setInterval(rotateServices, rotateDelay);
+    }
+
+    function stopRotation() {
+        clearInterval(autoRotate);
+    }
+
+    // Tab click functionality
+    serviceTabs.click(function () {
+        const tabText = $(this).text().trim();
+
+        if (tabText === "All Services") {
+            // Show all sections
+            serviceSections.fadeIn(600);
+            currentIndex = 0;
+            startRotation(); // Resume rotation through all
+        } else {
+            // Show only selected section
+            serviceSections.each(function () {
+                const sectionTitle = $(this).find("h3").text().trim();
+                if (sectionTitle.includes(tabText)) {
+                    $(this).fadeIn(600);
+                    currentIndex = 0; // Reset rotation index
+                } else {
+                    $(this).fadeOut(600);
+                }
+            });
+            stopRotation(); // Pause rotation when filtered
+        }
+
+        // Highlight clicked tab
+        serviceTabs.removeClass("active");
+        $(this).addClass("active");
+    });
+
+    // Pause rotation on hover
+    $(".service-section, .service-tab").hover(stopRotation, startRotation);
+
+    // Initialize: show first section and start rotation
+    showService(serviceSections.eq(currentIndex));
+    startRotation();
+});
+

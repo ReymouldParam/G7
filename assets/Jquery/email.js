@@ -21,13 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     closePopup.addEventListener("click", function () {
         popupMessage.style.display = "none";
-
-
     });
 
     // Get the current URL without the query parameters
     const baseUrl = window.location.href.split('?')[0];
-
     // Replace the current state with a new state without the query parameters
     history.replaceState(null, null, baseUrl);
 });

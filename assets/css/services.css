@@ -1,0 +1,138 @@
+.services-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== Category Tabs ===== */
+.service-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #0f1810;
+    border: 2px solid #00ff84;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.service-tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px 20px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border-right: 1px solid #00ff84;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-tab:last-child {
+    border-right: none;
+}
+
+.service-tab.active {
+    background-color: #00ff84;
+    color: #0a0f0a;
+    font-weight: 600;
+}
+
+/* ===== Service Card Layout ===== */
+.service-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(90deg, #0d120e, #111a13);
+    border: 2px solid #00ff84;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 40px;
+    transition: all 0.4s ease;
+}
+
+.service-section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(0, 255, 132, 0.3);
+}
+
+/* ===== Image Styling ===== */
+.service-image {
+    flex: 0 0 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 16px;
+    border: 2px solid #00ff84;
+    background-color: #0a0f0a;
+}
+
+/* ===== Content Styling ===== */
+.service-content {
+    flex: 1;
+    color: #ccc;
+}
+
+.service-content h3 {
+    font-size: 1.8rem;
+    color: #00ff84;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #bdbdbd;
+    margin-bottom: 15px;
+}
+
+/* ===== List Styling ===== */
+.service-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.service-list li::before {
+    content: "✔";
+    color: #00ff84;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 950px) {
+    .service-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-image {
+        width: 100%;
+    }
+
+    .service-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-content p,
+    .service-list li {
+        font-size: 0.95rem;
+    }
+}
