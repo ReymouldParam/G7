@@ -439,13 +439,6 @@
     }
 
     /* Header for mobile - will be replaced with mobile menu */
-    .main-header {
-        top: 8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        padding: 10px 15px;
-    }
 
     .logo img {
         height: 28px;
@@ -785,12 +778,7 @@
         font-size: 0.85rem;
     }
 
-    .main-header {
-        width: 92%;
-        padding: 10px 12px;
-        /* margin-top: 6px; */
-
-    }
+   
 
     .logo img {
         height: 26px;
@@ -868,11 +856,6 @@
     .btn-filled {
         padding: 9px 18px;
         font-size: 0.85rem;
-    }
-
-    .main-header {
-        width: 94%;
-        padding: 8px 10px;
     }
 
     .logo img {

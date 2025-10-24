@@ -8,25 +8,28 @@
     <link rel="stylesheet" href="assets/css/Global.css" />
     <link rel="stylesheet" href="assets/css/about-us.css" />
     <link rel="stylesheet" href="assets/css/services.css" />
-    <!-- <link rel="stylesheet" href="assets/css/Home.css" /> -->
-    <!-- Separate CSS files -->
+    <link rel="stylesheet" href="assets/css/Home.css" />
     <link rel="stylesheet" href="assets/css/responsiveness.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
     <!-- Header -->
     <header class="main-header">
         <div class="logo">
-            <img src="assets/IMAGES/G7-logo.svg" alt="Website Logo" />
+            <a href="./index.html">
+                <img src="assets/IMAGES/G7-logo.svg" alt="Website Logo" />
+            </a>
         </div>
-
         <!-- Desktop & Mobile Navigation -->
         <nav class="nav">
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
 
@@ -57,28 +60,29 @@
     <!-- ==============================
      SERVICES  SECTION
 ================================= -->
-    <section class="services-container">
+    <section class="premium-services">
+
         <!-- ===== Category Tabs ===== -->
-        <div class="service-tabs">
-            <div class="service-tab">All Services</div>
-            <div class="service-tab">Virtual CFO Services</div>
-            <div class="service-tab">Business Support Services</div>
-            <div class="service-tab">Entity Restructuring Services</div>
-            <div class="service-tab">Fund Raising</div>
+        <div class="premium-tabs">
+            <div class="premium-tab active">All Services</div>
+            <div class="premium-tab">Virtual CFO Services</div>
+            <div class="premium-tab">Business Support Services</div>
+            <div class="premium-tab">Entity Restructuring Services</div>
+            <div class="premium-tab">Fund Raising</div>
         </div>
 
         <!-- ===== Virtual CFO Services ===== -->
-        <div class="service-section">
-            <div class="service-image">
+        <div class="premium-card">
+            <div class="premium-image">
                 <img src="assets/IMAGES/Services-Container-img1.png" alt="Virtual CFO" />
             </div>
-            <div class="service-content">
+            <div class="premium-content">
                 <h3>Virtual CFO Services</h3>
                 <p>
-                    The Primary Role of a Virtual Chief Financial Officer is to help organizations in
+                    The primary role of a Virtual Chief Financial Officer is to help organizations in
                     financial planning, risk management, and improving decision-making processes.
                 </p>
-                <ul class="service-list">
+                <ul class="premium-points">
                     <li>The Primary Role of a Virtual Chief Financial Officer</li>
                     <li>Managing Financial Activities and Mitigating Risk</li>
                     <li>Ensuring Proper Analysis and Reporting</li>
@@ -88,17 +92,17 @@
         </div>
 
         <!-- ===== Business Support Services ===== -->
-        <div class="service-section">
-            <div class="service-image">
+        <div class="premium-card">
+            <div class="premium-image">
                 <img src="assets/IMAGES/Service-Container-img2.png" alt="Business Support" />
             </div>
-            <div class="service-content">
+            <div class="premium-content">
                 <h3>Business Support Services</h3>
                 <p>
                     We provide end-to-end business support that helps you streamline your operations,
                     increase productivity, and maintain efficiency across departments.
                 </p>
-                <ul class="service-list">
+                <ul class="premium-points">
                     <li>Process Optimization</li>
                     <li>Financial & Administrative Support</li>
                     <li>Staff Coordination & Reporting</li>
@@ -108,17 +112,17 @@
         </div>
 
         <!-- ===== Entity Restructuring Services ===== -->
-        <div class="service-section">
-            <div class="service-image">
+        <div class="premium-card">
+            <div class="premium-image">
                 <img src="assets/IMAGES/Service-Container-img3.png" alt="Entity Restructuring" />
             </div>
-            <div class="service-content">
+            <div class="premium-content">
                 <h3>Entity Restructuring Services</h3>
                 <p>
                     We help your organization restructure for better financial health,
                     legal compliance, and operational efficiency.
                 </p>
-                <ul class="service-list">
+                <ul class="premium-points">
                     <li>Strategic Financial Review</li>
                     <li>Corporate Restructuring Plans</li>
                     <li>Regulatory Compliance Support</li>
@@ -128,17 +132,17 @@
         </div>
 
         <!-- ===== Fund Raising Services ===== -->
-        <div class="service-section">
-            <div class="service-image">
+        <div class="premium-card">
+            <div class="premium-image">
                 <img src="assets/IMAGES/Service-Container-img4.png" alt="Fund Raising" />
             </div>
-            <div class="service-content">
+            <div class="premium-content">
                 <h3>Fund Raising Services</h3>
                 <p>
                     We connect you with the right investors and help your organization raise capital effectively
                     to fuel your strategic goals and expansion.
                 </p>
-                <ul class="service-list">
+                <ul class="premium-points">
                     <li>Financial Planning for Fund Raising</li>
                     <li>Investor Pitch Preparation</li>
                     <li>Capital Structuring Advisory</li>
@@ -172,21 +176,62 @@
             </div>
         </div>
     </section>
-
-    <!-- ===============================
-     HERO SECTION
-================================= -->
-    <section class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-subtitle">Turning Vision Into Value, Step By Step.</p>
-            <h1>
-                Expert Services Built Around<br />
-                Your Financial Goals.
-            </h1>
-            <a href="#contact" class="hero-btn">Contact</a>
+    <!--Expert Services  -->
+    <section class="financial-section">
+        <div class="overlay"></div>
+        <div class="content">
+            <p class="subtitle">Turning Vision Into Value, Step By Step.</p>
+            <h1 class="main-title">Expert Services Built Around<br>Your Financial Goals.</h1>
+            <button class="contact-btn">Contact</button>
         </div>
     </section>
+
+    <!-- Get In Touch Section -->
+    <section class="get-in-touch">
+        <h2>Get In Touch</h2>
+        <form class="email-form" action="./email.php" method="post">
+            <input name="email" type="email" placeholder="Enter Your Email" />
+            <div class="">
+                <button type="submit" class="btn-filled">
+                    send
+                    <img src="assets/IMAGES/seven-symbole.svg" alt="seven" class="seven-symbol" />
+                </button>
+            </div>
+        </form>
+
+        <!-- Footer -->
+        <footer class="global-footer">
+            <div class="footer-container">
+                <div class="footer-item">
+                    <h4>Address</h4>
+                    <p>xyz</p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Email</h4>
+                    <p>info@xyz.com<br>xyz@fgggg.com</p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Social Media</h4>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Contact</h4>
+                    <p>+91-9966326477</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © G7 | All rights Reserved | Designed by ReyMould</p>
+            </div>
+        </footer>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="assets/Jquery/home.js">
     </script>

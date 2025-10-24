@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="assets/css/Global.css" />
+    <link rel="stylesheet" href="assets/css/Home.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="assets/css/responsiveness.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="assets/IMAGES/G7-logo.svg" alt="Website Logo" />
+            </a>
+        </div>
+
+        <!-- Desktop & Mobile Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <!-- Left Side -->
+            <div class="contact-left">
+                <h4 class="connect-text">Connect With Us</h4>
+                <h1 class="contact-heading">
+                    Turn Your Financial<br>
+                    Vision Into Lasting<br>
+                    Success.
+                </h1>
+                <div class="contact-info">
+                    <p><i class="icon">📧</i> info@xyz.com</p>
+                    <div class="social-icons">
+                        <a href="#">🔵</a>
+                        <a href="#">📸</a>
+                        <a href="#">📘</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="contact-right">
+                <h3>Let's talk</h3>
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="text" placeholder="Company">
+                    </div>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Phone">
+                    </div>
+                    <input type="text" placeholder="Select Service" class="full-width">
+                    <textarea placeholder="Write Your Message" class="full-width" rows="5"></textarea>
+                    <div class="form-footer" style="display: flex; align-items: center;justify-content: space-between;">
+                        <p class="bottom-text">Turning Vision Into Value, Step By Step.</p>
+                        <button type="submit" class="send-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section class="get-in-touch">
+        <h2>Get In Touch</h2>
+        <form class="email-form" action="./email.php" method="post">
+            <input name="email" type="email" placeholder="Enter Your Email" />
+            <div class="">
+                <button type="submit" class="btn-filled">
+                    send
+                    <img src="assets/IMAGES/seven-symbole.svg" alt="seven" class="seven-symbol" />
+                </button>
+            </div>
+        </form>
+
+        <!-- Footer -->
+        <footer class="global-footer">
+            <div class="footer-container">
+                <div class="footer-item">
+                    <h4>Address</h4>
+                    <p>xyz</p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Email</h4>
+                    <p>info@xyz.com<br>xyz@fgggg.com</p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Social Media</h4>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Contact</h4>
+                    <p>+91-9966326477</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © G7 | All rights Reserved | Designed by ReyMould</p>
+            </div>
+        </footer>
+    </section>
+    <!-- popup -->
+    <div id="popup-message" class="popup">
+        <h2 id="popup-heading" class="pop-up-heading"></h2>
+        <p id="popup-para" class="pop-up-para"></p>
+        <button id="close-popup" class="close-btn">Close</button>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="assets/Jquery/home.js">
+    </script>
+    <script src="assets/Jquery/Global.js">
+    </script>
+    <script src="assets/Jquery/email.js"></script>
+
+</body>
+
+</html>

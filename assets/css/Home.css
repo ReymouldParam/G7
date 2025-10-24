@@ -807,13 +807,6 @@ section {
     border-radius: 0
   }
 
-  .main-header {
-    top: 14px;
-    left: 10px;
-    transform: none;
-    width: calc(100% - 20px)
-  }
-
   .banner-content h1 {
     font-size: 2rem
   }
