@@ -1,6 +1,6 @@
 .services-container {
-    width: 90%;
-    max-width: 1200px;
+    width: 96%;
+    /* max-width: 1200px; */
     margin: 60px auto;
     font-family: "Poppins", sans-serif;
 }
@@ -19,7 +19,7 @@
 .service-tab {
     flex: 1;
     text-align: center;
-    padding: 15px 20px;
+    padding: 10px;
     color: #fff;
     font-weight: 500;
     cursor: pointer;
@@ -30,6 +30,10 @@
     overflow: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-bottom: 10px;
+    height: 55px;
+    /* vertical-align: middle; */
+    padding-top: 13px;
+
 }
 
 .service-tab:last-child {
@@ -37,59 +41,81 @@
 }
 
 .service-tab.active {
-    background-color: #00ff84;
-    color: #0a0f0a;
+    background-color: #000;
+    color: #00ff84;
     font-weight: 600;
 }
 
 /* ===== Service Card Layout ===== */
 .service-section {
     display: flex;
-    align-items: center;
-    gap: 30px;
-    background: linear-gradient(90deg, #0d120e, #111a13);
-    border-radius: 20px;
-    padding: 35px;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    background: linear-gradient(-135deg, #0b1a0f 0%, #0B9444 30%, #061a10 100%);
+    /* background-size: 300% 300%; */
+    gap: 40px;
+    padding: 45px 55px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 30px rgba(0, 255, 132, 0.1);
     transition: all 0.4s ease;
+    border: 1px solid #fff;
+    animation: gradientFlow 8s ease infinite;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+/* ===== Animated Gradient Keyframes ===== */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .service-section:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(0, 255, 132, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 0 35px rgba(0, 255, 132, 0.3);
 }
 
 /* ===== Image Styling ===== */
 .service-image {
-    flex: 0 0 280px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .service-image img {
     width: 100%;
     border-radius: 16px;
-    background-color: #0a0f0a;
+    object-fit: cover;
 }
 
 /* ===== Content Styling ===== */
 .service-content {
-    flex: 1;
-    color: #ccc;
+    /* flex: 1; */
+    color: #d8d8d8;
 }
 
 .service-content h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #00ff84;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
 .service-content p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #bdbdbd;
-    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #b9b9b9;
+    margin-bottom: 20px;
+    max-width: 700px;
 }
 
 /* ===== List Styling ===== */
@@ -101,41 +127,52 @@
 
 .service-list li {
     position: relative;
-    padding-left: 28px;
-    margin-bottom: 10px;
-    color: #e0e0e0;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: #e6e6e6;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    transition: color 0.3s ease;
 }
 
 .service-list li::before {
-    content: "✔";
-    color: #00ff84;
-    font-weight: bold;
+    content: "";
     position: absolute;
     left: 0;
-    top: 0;
-    font-size: 1.1rem;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    background: url("../IMAGES/7-list-item.svg") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 950px) {
+.service-list li:hover {
+    color: #00ff84;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 900px) {
     .service-section {
         flex-direction: column;
         text-align: center;
+        padding: 35px;
     }
 
     .service-image {
-        width: 100%;
+        flex: 0 0 auto;
+        margin-bottom: 25px;
     }
 
-    .service-content h3 {
-        font-size: 1.5rem;
+    .service-content p {
+        margin: 0 auto 20px;
     }
 
-    .service-content p,
     .service-list li {
-        font-size: 0.95rem;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
     }
 }
 
@@ -149,6 +186,10 @@
     position: relative;
     overflow: hidden;
     font-family: "Poppins", sans-serif;
+    width: 96%;
+    margin: 50px auto;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
 }
 
 /* Subtle striped background pattern */
