@@ -1,5 +1,5 @@
 // Header Effect 
-$(document).ready(function() {
+$(document).ready(function () {
     gsap.registerPlugin(ScrollTrigger);
 
     const header = $(".main-header");
@@ -78,14 +78,21 @@ $(document).ready(function() {
     }
 });
 
-// Mobile header toggle
-const mobileToggle = document.querySelector('.mobile-menu-toggle');
-const header = document.querySelector('.main-header');
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".main-header");
+    const toggle = document.querySelector(".mobile-menu-toggle");
 
-if (mobileToggle && header) {
-    mobileToggle.addEventListener('click', () => {
-        header.classList.toggle('nav-open');
-        // Animate the hamburger into an X
-        mobileToggle.classList.toggle('open');
+    // Expand on scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+            header.classList.add("expanded");
+        } else {
+            header.classList.remove("expanded");
+        }
     });
-}
+
+    // Mobile menu toggle
+    toggle.addEventListener("click", () => {
+        header.classList.toggle("nav-open");
+    });
+});

@@ -219,3 +219,20 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(storySection);
 });
 
+
+// Live Counter For Character 
+const messageField = document.querySelector('textarea[name="message"]');
+const charCount = document.getElementById('charCount');
+const maxLength = messageField.getAttribute('maxlength');
+
+messageField.addEventListener('input', () => {
+    const currentLength = messageField.value.length;
+    charCount.textContent = `${currentLength} / ${maxLength}`;
+
+    // Optional: warn when near limit
+    if (currentLength > maxLength * 0.9) {
+        charCount.style.color = "#d9534f"; // red when near limit
+    } else {
+        charCount.style.color = "#666"; // default color
+    }
+});

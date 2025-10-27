@@ -202,18 +202,17 @@
         </div>
     </section>
     <!-- Footer -->
-    <!-- Get In Touch Section -->
     <section class="get-in-touch">
         <h2>Get In Touch</h2>
-        <div class="email-form">
-            <input type="email" placeholder="Enter Your Email" />
+        <form class="email-form" action="./email.php" method="post">
+            <input name="email" type="email" placeholder="Enter Your Email" />
             <div class="">
-                <a href="#" class="btn-filled">
+                <button type="submit" class="btn-filled">
                     send
                     <img src="assets/IMAGES/seven-symbole.svg" alt="seven" class="seven-symbol" />
-                </a>
+                </button>
             </div>
-        </div>
+        </form>
 
         <!-- Footer -->
         <footer class="global-footer">
@@ -247,6 +246,13 @@
             </div>
         </footer>
     </section>
+    <!-- popup -->
+    <div id="popup-message" class="popup">
+        <h2 id="popup-heading" class="pop-up-heading"></h2>
+        <p id="popup-para" class="pop-up-para"></p>
+        <button id="close-popup" class="close-btn">Close</button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="assets/Jquery/home.js">
     </script>

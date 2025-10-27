@@ -68,28 +68,48 @@
             <!-- Right Side -->
             <div class="contact-right">
                 <h3>Let's talk</h3>
-                <form>
+                <form action="contact.php" method="POST">
                     <div class="form-row">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="text" placeholder="Company">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="text" name="company" placeholder="Company">
                     </div>
                     <div class="form-row">
-                        <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Phone">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phone" placeholder="Phone">
                     </div>
-                    <input type="text" placeholder="Select Service" class="full-width">
-                    <textarea placeholder="Write Your Message" class="full-width" rows="5"></textarea>
-                    <div class="form-footer" style="display: flex; align-items: center;justify-content: space-between;">
+                    <!-- Dropdown for Services -->
+                    <select name="service" class="full-width" required>
+                        <option value="">Select CFO Service</option>
+                        <option value="Virtual CFO">Virtual CFO Services</option>
+                        <option value="Financial Planning & Analysis">Financial Planning & Analysis</option>
+                        <option value="Budgeting & Forecasting">Budgeting & Forecasting</option>
+                        <option value="Cash Flow Management">Cash Flow Management</option>
+                        <option value="Compliance & Reporting">Compliance & Reporting</option>
+                        <option value="Business Strategy">Business Strategy</option>
+                        <option value="Fundraising Support">Fundraising Support</option>
+                        <option value="Accounting & Bookkeeping Oversight">Accounting & Bookkeeping Oversight</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <!-- Message with Live Character Count -->
+                    <div class="textarea-wrapper full-width" style="position: relative;">
+                        <textarea name="message" placeholder="Write Your Message" class="full-width" rows="5"
+                            maxlength="500" required></textarea>
+                        <small id="charCount" style="position: absolute; bottom: 6px; right: 10px; color: #666;">
+                            0 / 500
+                        </small>
+                    </div>
+
+                    <div class="form-footer"
+                        style="display: flex; align-items: center; justify-content: space-between;">
                         <p class="bottom-text">Turning Vision Into Value, Step By Step.</p>
                         <button type="submit" class="send-btn">Send</button>
                     </div>
                 </form>
             </div>
-
         </div>
     </section>
 
-    <!-- Get In Touch Section -->
+    <!-- Footer -->
     <section class="get-in-touch">
         <h2>Get In Touch</h2>
         <form class="email-form" action="./email.php" method="post">
