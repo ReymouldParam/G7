@@ -40,6 +40,7 @@
    MOBILE DEVICES (up to 767px)
    ========================================== */
 @media (max-width: 767px) {
+
     /* Banner Mobile */
     .banner {
         width: 100% !important;
@@ -106,7 +107,7 @@
     .banner-circular-bg {
         width: 240px !important;
         height: 170px !important;
-        bottom: -20px !important;
+        bottom: -85px !important;
         opacity: 0.1 !important;
     }
 
@@ -791,6 +792,7 @@
    PRINT STYLES
    ========================================== */
 @media print {
+
     .banner-circular-bg,
     .pinstripes,
     .about-pinstripes,
