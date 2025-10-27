@@ -468,7 +468,7 @@ section {
   }
 
   to {
-    transform: translate(-25%, -50%) rotate(360deg);
+    transform: translate(-25%, -50%) rotate(-360deg);
   }
 }
 

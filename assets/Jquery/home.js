@@ -8,19 +8,32 @@ $(function () {
     ];
     let idx = 0;
     const $span = $(".clarity-animated");
-    const duration = 5000; // 5 seconds: smooth, professional
+    const $circle = $(".service-circular-bg");
+    const duration = 5000; // 5 seconds per phrase
 
     function nextText() {
+        // Reset text animation
         $span.css({ animation: 'none', opacity: 0 }).text(phrases[idx]);
         void $span[0].offsetWidth;
         $span.css({
             animation: `claritySlide ${duration}ms cubic-bezier(.71,0,.18,1) forwards`
         });
+
+        // Trigger one smooth rotation each time text changes
+        $circle
+            .css({ animation: 'none' }) // reset animation
+            .outerWidth(); // force reflow
+        $circle.css({
+            animation: `rotate-circular-bg 1s ease-in-out forwards`
+        });
+
         idx = (idx + 1) % phrases.length;
         setTimeout(nextText, duration);
     }
+
     nextText();
 });
+
 
 // ****************************** Home Page Services Functionality 
 $(document).ready(function () {
