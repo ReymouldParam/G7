@@ -20,7 +20,7 @@
     flex-wrap: wrap;
     width: 96%;
     /* max-width: 1300px; */
-    background: #0b0b0b;
+    background: linear-gradient(to bottom, #000 50%, #004d23);
     padding: 100px 60px;
     /* padding-top: 50px; */
     box-shadow: 0 0 30px rgba(0, 255, 100, 0.2);
@@ -166,3 +166,30 @@ textarea {
         align-self: center;
     }
 }
+
+/* Icon styles  */
+.contact-info {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.contact-info i {
+    margin-right: 8px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0077b5;
+    /* LinkedIn blue, or pick your theme color */
+}
+

@@ -104,27 +104,30 @@ $(document).ready(function () {
 
 // ***************************** Services Page Functionality
 $(document).ready(function () {
-    const serviceSections = $(".service-section");
-    const serviceTabs = $(".service-tab");
-    const rotateDelay = 6000; // 6 seconds
+    const serviceSections = $(".premium-card");
+    const serviceTabs = $(".premium-tab");
+    const rotateDelay = 4000; // 4 seconds
     let currentIndex = 0;
     let autoRotate;
+
+    // Show all cards by default
+    serviceSections.show();
 
     // Show a section and highlight its tab
     function showService(section) {
         serviceSections.hide();
         section.fadeIn(600);
-
         const sectionTitle = section.find("h3").text().trim();
+
         serviceTabs.removeClass("active");
         serviceTabs.each(function () {
-            if (sectionTitle.includes($(this).trim())) {
+            if (sectionTitle.includes($(this).text().trim())) {
                 $(this).addClass("active");
             }
         });
     }
 
-    // Get visible sections for rotation
+    // Get currently visible sections for rotation
     function getVisibleSections() {
         return serviceSections.filter(":visible");
     }
@@ -132,8 +135,7 @@ $(document).ready(function () {
     // Auto-rotate through visible sections
     function rotateServices() {
         const visibleSections = getVisibleSections();
-        if (visibleSections.length <= 1) return; // No rotation if only one visible
-
+        if (visibleSections.length <= 1) return;
         currentIndex = (currentIndex + 1) % visibleSections.length;
         showService(visibleSections.eq(currentIndex));
     }
@@ -150,12 +152,11 @@ $(document).ready(function () {
     // Tab click functionality
     serviceTabs.click(function () {
         const tabText = $(this).text().trim();
-
         if (tabText === "All Services") {
             // Show all sections
             serviceSections.fadeIn(600);
             currentIndex = 0;
-            startRotation(); // Resume rotation through all
+            startRotation(); // Resume rotation
         } else {
             // Show only selected section
             serviceSections.each(function () {
@@ -169,17 +170,15 @@ $(document).ready(function () {
             });
             stopRotation(); // Pause rotation when filtered
         }
-
         // Highlight clicked tab
         serviceTabs.removeClass("active");
         $(this).addClass("active");
     });
 
     // Pause rotation on hover
-    $(".service-section, .service-tab").hover(stopRotation, startRotation);
+    $(".premium-card, .premium-tab").hover(stopRotation, startRotation);
 
-    // Initialize: show first section and start rotation
-    showService(serviceSections.eq(currentIndex));
+    // Start rotation for all sections by default
     startRotation();
 });
 

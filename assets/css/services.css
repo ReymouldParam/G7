@@ -46,7 +46,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 5%;
     margin-bottom: 50px;
     padding: 45px 55px;
     border: 1px solid #fff;
@@ -56,6 +56,7 @@
     box-shadow: 0 8px 30px rgba(0, 255, 132, 0.1);
     transition: all 0.4s ease;
     animation: premiumGradientFlow 8s ease infinite;
+    height: 430px;
 }
 
 .premium-card:hover {
@@ -80,7 +81,7 @@
 
 /* ===== Image Section ===== */
 .premium-image {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +90,8 @@
 .premium-image img {
     width: 100%;
     border-radius: 16px;
-    object-fit: cover;
+    object-fit: contain;
+    height: 350px;
 }
 
 /* ===== Text Section ===== */
