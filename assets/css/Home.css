@@ -397,8 +397,10 @@ section {
 }
 
 .who-logo img {
-  width: 220px;
-  opacity: 0.2;
+  width: 100%;
+  height: 400px;
+  margin-top: 15%;
+  margin-left: 20%;
 }
 
 /* === OUR SERVICES === */
