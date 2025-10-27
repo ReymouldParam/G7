@@ -78,6 +78,8 @@ $(document).ready(function () {
     }
 });
 
+
+// Mobile Header
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".main-header");
     const toggle = document.querySelector(".mobile-menu-toggle");
@@ -95,4 +97,36 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.addEventListener("click", () => {
         header.classList.toggle("nav-open");
     });
+});
+
+// Highlighting the current page 
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".main-header .nav a");
+    const sevenSymbol = document.querySelector(".seven-symbol");
+
+    let activeLink = null;
+
+    // Find the active link based on URL
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+            activeLink = link;
+        } else {
+            link.classList.remove("active");
+        }
+    });
+
+    // Position the symbol above the active link
+    if (activeLink && sevenSymbol) {
+        const linkRect = activeLink.getBoundingClientRect();
+        const navRect = activeLink.closest(".nav").getBoundingClientRect();
+        const leftPos = linkRect.left - navRect.left + (linkRect.width / 2) - (sevenSymbol.offsetWidth / 2);
+
+        sevenSymbol.style.left = `${leftPos}px`;
+        sevenSymbol.classList.add("visible");
+    } else {
+        sevenSymbol.classList.remove("visible");
+    }
 });

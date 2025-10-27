@@ -29,6 +29,8 @@
 
         <!-- Desktop & Mobile Navigation -->
         <nav class="nav">
+            <!-- Symbol that shows above the active link -->
+            <img src="assets/IMAGES/seven-symbole.svg" alt="seven" class="seven-symbol" />
             <ul>
                 <li><a href="./index.html" class="active">Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -68,7 +70,7 @@
             <!-- Right Side -->
             <div class="contact-right">
                 <h3>Let's talk</h3>
-                <form action="contact.php" method="POST">
+                <form action="contact.php" method="POST" class="contact-form">
                     <div class="form-row">
                         <input type="text" name="name" placeholder="Full Name" required>
                         <input type="text" name="company" placeholder="Company">
@@ -102,7 +104,10 @@
                     <div class="form-footer"
                         style="display: flex; align-items: center; justify-content: space-between;">
                         <p class="bottom-text">Turning Vision Into Value, Step By Step.</p>
-                        <button type="submit" class="send-btn">Send</button>
+                        <button href="#" class="btn-outline">
+                            Submit
+                            <img src="assets/IMAGES/seven-symbole.svg" alt="seven" class="seven-symbol" />
+                        </button>
                     </div>
                 </form>
             </div>

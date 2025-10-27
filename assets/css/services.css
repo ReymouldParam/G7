@@ -313,6 +313,9 @@
     position: relative;
     z-index: 1;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .subtitle {
