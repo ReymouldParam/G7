@@ -1,921 +1,948 @@
 /* ===========================
-   RESPONSIVE STYLES
-   HD (1920px), Full HD (2560px), Tablet, Mobile
+   RESPONSIVE STYLES FOR ALL DEVICES
+   Mobile, HD, Full HD, Mac
    =========================== */
 
-/* ===========================
-   FULL HD (2560px+) 
-   =========================== */
-@media (min-width: 2560px) {
-    .banner {
-        max-width: 2400px;
-        margin: 10px auto;
-    }
-
-    .banner-content h1 {
-        font-size: 5.5rem;
-    }
-
-    .banner-content h1 span {
-        font-size: 4.8rem;
-    }
-
-    .subtitle {
-        font-size: 1.3rem;
-    }
-
+/* ==========================================
+   TABLET & SMALLER (up to 1100px)
+   ========================================== */
+@media (max-width: 1100px) {
     .main-header {
-        width: 60%;
-        padding: 18px 40px;
-    }
-
-    .main-header.sticky {
-        padding: 22px 80px;
+        position: absolute !important;
+        top: 8% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 92% !important;
+        border-radius: 16px !important;
+        padding: 14px 20px !important;
     }
 
     .logo img {
-        height: 45px;
+        height: 32px !important;
+    }
+
+    .main-header .nav ul {
+        gap: 20px !important;
     }
 
     .main-header .nav a {
-        font-size: 1.1rem;
+        font-size: 15px !important;
+        padding: 6px 0 !important;
     }
-
-    .who-we-are,
-    .how-benefit {
-        max-width: 2200px;
-        padding: 80px 100px;
-    }
-
-    .our-services {
-        max-width: 2200px;
-        padding: 80px 100px;
-    }
-
-    .who-text h2,
-    .benefit-text h2,
-    .our-services h2 {
-        font-size: 2.8rem;
-    }
-
-    .who-text p,
-    .benefit-text p {
-        font-size: 1.1rem;
-        max-width: 650px;
-    }
-
-    .service-box h3 {
-        font-size: 1.8rem;
-    }
-
-    .service-box p {
-        font-size: 1.1rem;
-    }
-}
-
-/* ===========================
-   HD (1920px) 
-   =========================== */
-@media (min-width: 1920px) and (max-width: 2559px) {
-    .banner {
-        /* max-width: 1800px; */
-    }
-
-    .banner-content h1 {
-        font-size: 4.8rem;
-    }
-
-    .banner-content h1 span {
-        font-size: 4.2rem;
-    }
-
-    .main-header {
-        width: 58%;
-        top: 5%;
-    }
-
-    .who-we-are,
-    .how-benefit {
-        /* max-width: 1600px; */
-    }
-
-    .our-services {
-        /* max-width: 1600px; */
-    }
-}
-
-/* ===========================
-   STANDARD DESKTOP (1440px - 1919px)
-   =========================== */
-@media (min-width: 1440px) and (max-width: 1919px) {
-    .banner {
-        width: 96%;
-    }
-
-    .main-header {
-        width: 54%;
-    }
-
-    .who-we-are,
-    .how-benefit,
-    .our-services {
-        width: 92%;
-    }
-}
-
-/* ===========================
-   LAPTOP (1024px - 1439px)
-   =========================== */
-@media (min-width: 1024px) and (max-width: 1439px) {
-    .banner {
-        width: 96%;
-    }
-
-    .banner-content h1 {
-        font-size: 3.8rem;
-    }
-
-    .banner-content h1 span {
-        font-size: 3.2rem;
-    }
-
-    .main-header {
-        width: 58%;
-        padding: 12px 20px;
-    }
-
-    .logo img {
-        height: 32px;
-    }
-
-    .main-header .nav ul {
-        gap: 20px;
-    }
-
-    .who-we-are,
-    .how-benefit {
-        padding: 50px 60px;
-        width: 92%;
-    }
-
-    .our-services {
-        padding: 50px 60px;
-    }
-
-    .side-panel {
-        width: 16%;
-    }
-
-    .services-container {
-        gap: 35px;
-    }
-
-    .benefit-container {
-        gap: 35px;
-    }
-}
-
-/* ===========================
-   TABLET LANDSCAPE (900px - 1023px)
-   =========================== */
-@media (min-width: 900px) and (max-width: 1023px) {
 
     .left-panel,
     .right-panel {
-        width: 14%;
+        display: none !important;
     }
 
     .banner .inner-frame {
-        inset: 16px;
+        inset: 14px !important;
     }
 
     .pinstripes {
-        inset: 16px;
+        inset: 14px !important;
     }
 
     .banner-content h1 {
-        font-size: 3.2rem;
+        font-size: 2.6rem !important;
     }
 
     .banner-content h1 span {
-        font-size: 2.6rem;
+        font-size: 2rem !important;
     }
 
+    .banner-circular-bg {
+        width: 500px !important;
+        height: 350px !important;
+        bottom: -100px !important;
+    }
+}
+
+/* ==========================================
+   MOBILE DEVICES (up to 767px)
+   ========================================== */
+@media (max-width: 767px) {
+
+    /* Header Mobile - Fixed positioning */
     .main-header {
-        width: 70%;
-        padding: 12px 18px;
+        position: absolute !important;
+        top: 5% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90% !important;
+        padding: 10px 14px !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    /* Show mobile menu button */
+    .mobile-menu-toggle {
+        display: flex !important;
+        order: 3 !important;
+    }
+
+    /* Hide desktop navigation by default */
+    .main-header .nav {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        background: var(--header-bg) !important;
+        border-radius: 0 0 14px 14px !important;
+        overflow: hidden !important;
+        max-height: 0 !important;
+        transition: max-height 0.4s ease !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Show menu when toggled */
+    .main-header.nav-open .nav {
+        max-height: 500px !important;
     }
 
     .main-header .nav ul {
-        gap: 18px;
+        flex-direction: column !important;
+        gap: 0 !important;
+        width: 100% !important;
     }
 
-    .who-we-are,
-    .how-benefit {
-        padding: 45px 50px;
-        width: 90%;
+    .main-header .nav li {
+        width: 100% !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
     }
 
-    .our-services {
-        padding: 45px 50px;
-        margin: 60px auto;
+    .main-header .nav a {
+        display: block !important;
+        font-size: 14px !important;
+        padding: 14px 20px !important;
+        width: 100% !important;
+    }
+
+    .logo img {
+        height: 26px !important;
+    }
+
+    /* Banner Mobile */
+    .banner {
+        width: 100% !important;
+        margin: 0 !important;
+        margin-top: 70px !important;
+        border-radius: 0 !important;
+        min-height: 65vh !important;
+        padding: 30px 0 !important;
+    }
+
+    .banner .inner-frame {
+        inset: 10px !important;
+        border-radius: 18px !important;
+        border-top-left-radius: 70px !important;
+        border-bottom-right-radius: 70px !important;
+    }
+
+    .banner .pinstripes {
+        inset: 10px !important;
+        border-radius: 18px !important;
+    }
+
+    .banner-content {
+        padding: 0 14px !important;
+    }
+
+    .subtitle {
+        font-size: 0.85rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.15 !important;
+        margin: 6px 0 8px !important;
+    }
+
+    .banner-content h1 span {
+        font-size: 1.3rem !important;
+        margin-top: 6px !important;
+    }
+
+    .btn-wrapper {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        margin-top: 8px !important;
+    }
+
+    .btn-outline,
+    .btn-filled {
+        width: 100% !important;
+        max-width: 250px !important;
+        padding: 12px 18px !important;
+        font-size: 14px !important;
+        border-radius: 22px !important;
+    }
+
+    .btn-filled .seven-symbol,
+    .btn-outline .seven-symbol {
+        display: none !important;
+    }
+
+    .banner-circular-bg {
+        width: 240px !important;
+        height: 170px !important;
+        bottom: -20px !important;
+        opacity: 0.1 !important;
+    }
+
+    /* Who We Are Mobile */
+    .who-we-are {
+        width: 96% !important;
+        padding: 30px 16px !important;
+        border-radius: 18px !important;
+        margin: 15px auto !important;
+        transform: translateY(40px) !important;
     }
 
     .who-container {
-        height: auto;
-        min-height: 280px;
+        flex-direction: column !important;
+        height: auto !important;
+        text-align: center !important;
+        gap: 20px !important;
     }
 
-    .benefit-container {
-        height: auto;
-        min-height: 280px;
+    .who-text {
+        text-align: center !important;
     }
 
-    .services-container {
-        gap: 30px;
+    .who-text h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 10px !important;
     }
 
-    .service-box h3 {
-        font-size: 1.4rem;
-    }
-
-    .service-box p {
-        font-size: 0.9rem;
-    }
-}
-
-/* ===========================
-   TABLET PORTRAIT (768px - 899px)
-   =========================== */
-@media (min-width: 768px) and (max-width: 899px) {
-
-    .left-panel,
-    .right-panel {
-        display: none;
-    }
-
-    .banner .inner-frame {
-        inset: 14px;
-    }
-
-    .pinstripes {
-        inset: 14px;
-    }
-
-    .banner-content {
-        max-width: 650px;
-    }
-
-    .banner-content h1 {
-        font-size: 2.8rem;
-    }
-
-    .banner-content h1 span {
-        font-size: 2.3rem;
-    }
-
-    .subtitle {
-        font-size: 0.95rem;
-    }
-
-    .main-header {
-        width: 85%;
-        padding: 12px 16px;
-    }
-
-    .main-header .nav ul {
-        gap: 15px;
-    }
-
-    .main-header .nav a {
-        font-size: 0.9rem;
-    }
-
-    .btn-wrapper {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .btn-outline,
-    .btn-filled {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .who-we-are,
-    .how-benefit {
-        padding: 40px 35px;
-        width: 88%;
-        transform: translateY(80px);
-    }
-
-    .our-services {
-        padding: 40px 35px;
-        margin: 60px auto;
-    }
-
-    .who-container,
-    .benefit-container {
-        flex-direction: column;
-        height: auto;
-        gap: 30px;
-    }
-
-    .who-text h2,
-    .benefit-text h2,
-    .our-services h2 {
-        font-size: 1.8rem;
-    }
-
-    .who-text p,
-    .benefit-text p {
-        max-width: 100%;
-        font-size: 0.95rem;
+    .who-text p {
+        max-width: 100% !important;
+        font-size: 13px !important;
+        margin: 8px 0 15px !important;
+        line-height: 1.5 !important;
     }
 
     .who-logo img {
-        width: 180px;
-        margin-top: 20px;
+        width: 100% !important;
+        max-width: 150px !important;
+        height: auto !important;
+        margin: 0 auto !important;
     }
 
-    .services-container {
-        flex-direction: column;
-        gap: 25px;
+    .about-pinstripes {
+        inset: 10px !important;
+        border-radius: 14px !important;
     }
 
-    .services-image {
-        width: 100%;
-    }
-
-    .benefit-icon {
-        width: 100%;
-    }
-
-    .icon-track {
-        width: 100%;
-    }
-
-    .banner-circular-bg {
-        width: 500px;
-        height: 350px;
-        bottom: -100px;
-    }
-
-    .clients-section {
-        margin-top: -80px;
-    }
-
-    .logo-box {
-        flex: 0 0 180px;
-        height: 140px;
-    }
-
-    .get-in-touch h2 {
-        font-size: 2rem;
-    }
-
-    .email-form input {
-        width: 100%;
-    }
-}
-
-/* ===========================
-   MOBILE LARGE (576px - 767px)
-   =========================== */
-@media (min-width: 576px) and (max-width: 767px) {
-    .banner {
-        width: 100%;
-        margin: 12px 0;
-        border-radius: 20px;
-        min-height: 85vh;
-    }
-
-    .banner .inner-frame {
-        inset: 12px;
-        border-radius: 18px;
-        border-top-left-radius: 80px;
-        border-bottom-right-radius: 80px;
-    }
-
-    .pinstripes {
-        inset: 12px;
-    }
-
-    .left-panel,
-    .right-panel {
-        display: none;
-    }
-
-    .banner-content {
-        max-width: 90%;
-        padding: 0 20px;
-    }
-
-    .subtitle {
-        font-size: 0.9rem;
-    }
-
-    .banner-content h1 {
-        font-size: 2.2rem;
-        margin: 8px 0 10px;
-    }
-
-    .banner-content h1 span {
-        font-size: 1.8rem;
-    }
-
-    .btn-wrapper {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .btn-outline,
-    .btn-filled {
-        width: 100%;
-        max-width: 220px;
-        padding: 10px 22px;
-        font-size: 0.9rem;
-    }
-
-    /* Header for mobile - will be replaced with mobile menu */
-
-    .logo img {
-        height: 28px;
-    }
-
-    .main-header .nav {
-        display: none;
-        /* Hidden by default, mobile menu will replace */
-    }
-
-    .who-we-are,
-    .how-benefit {
-        padding: 35px 25px;
-        width: 90%;
-        border-radius: 25px;
-        transform: translateY(60px);
-    }
-
-    .who-container,
-    .benefit-container {
-        flex-direction: column;
-        height: auto;
-        gap: 25px;
-    }
-
-    .who-text h2,
-    .benefit-text h2 {
-        font-size: 1.6rem;
-    }
-
-    .who-text p,
-    .benefit-text p {
-        font-size: 0.9rem;
-        margin: 12px 0 20px;
-    }
-
-    .who-logo img {
-        width: 140px;
-    }
-
+    /* Services Mobile */
     .our-services {
-        padding: 35px 25px;
-        margin: 50px auto;
-        border-radius: 25px;
+        width: 96% !important;
+        padding: 30px 16px !important;
+        border-radius: 18px !important;
+        margin: 30px auto !important;
     }
 
     .our-services h2 {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
+        font-size: 1.3rem !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
     }
 
     .services-container {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column !important;
+        gap: 20px !important;
     }
 
     .service-box {
-        padding: 18px;
-        border-radius: 15px;
+        padding: 14px !important;
+        margin-bottom: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .service-box>div {
+        flex: 1 !important;
     }
 
     .service-box h3 {
-        font-size: 1.2rem;
+        font-size: 15px !important;
+        margin-bottom: 5px !important;
     }
 
     .service-box p {
-        font-size: 0.85rem;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
     }
 
     .service-icon img {
-        height: 50px;
+        height: 35px !important;
     }
 
     .services-image {
-        border-radius: 20px;
-        padding: 15px;
+        margin-top: 0 !important;
+        padding: 12px !important;
+    }
+
+    .services-image img {
+        height: 200px !important;
+    }
+
+    .arrow-indicator {
+        right: 12px !important;
+        bottom: 12px !important;
+        font-size: 14px !important;
+    }
+
+    /* How Benefit Mobile */
+    .how-benefit {
+        width: 96% !important;
+        padding: 30px 16px !important;
+        border-radius: 18px !important;
+        margin: 30px auto !important;
+        transform: translateY(-40px) !important;
+    }
+
+    .benefit-container {
+        flex-direction: column !important;
+        height: auto !important;
+        gap: 20px !important;
+        text-align: center !important;
+    }
+
+    .benefit-text h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .benefit-text p {
+        max-width: 100% !important;
+        font-size: 13px !important;
+        margin: 8px 0 15px !important;
+        line-height: 1.5 !important;
     }
 
     .benefit-icon {
-        width: 100%;
-        overflow-x: hidden;
+        display: none !important;
     }
 
-    .icon-track {
-        width: 200%;
+    .our-pinstripes {
+        inset: 10px !important;
+        border-radius: 14px !important;
     }
 
-    .icon-wrapper img {
-        height: 180px;
-    }
-
-    .benefit-badge {
-        font-size: 0.85rem;
-        padding: 8px 16px;
-    }
-
-    .banner-circular-bg {
-        width: 400px;
-        height: 280px;
-        bottom: -80px;
-    }
-
+    /* Clients Mobile */
     .clients-section {
-        margin-top: -60px;
-        padding: 15px 0;
+        margin-top: -40px !important;
+        padding: 20px 12px !important;
     }
 
     .clients-section h2 {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
     }
 
     .logo-box {
-        flex: 0 0 150px;
-        height: 110px;
-        font-size: 1rem;
+        flex: 0 0 100px !important;
+        height: 80px !important;
+        font-size: 12px !important;
     }
 
+    .marquee-track {
+        gap: 12px !important;
+        animation: scroll 10s linear infinite !important;
+    }
+
+    /* Footer Mobile */
     .get-in-touch {
-        border-top-left-radius: 60px;
-        border-top-right-radius: 60px;
-        padding: 20px 15px;
+        border-top-left-radius: 40px !important;
+        border-top-right-radius: 40px !important;
+        padding: 15px 12px !important;
     }
 
     .get-in-touch h2 {
-        font-size: 1.8rem;
+        font-size: 1.3rem !important;
+        margin-bottom: 12px !important;
+        padding-top: 10px !important;
     }
 
     .email-form {
-        flex-direction: column;
+        flex-direction: column !important;
+        gap: 10px !important;
     }
 
     .email-form input {
-        width: 100%;
-        max-width: 100%;
+        width: 90% !important;
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+        border-radius: 25px !important;
+    }
+
+    .email-form button {
+        width: 90% !important;
+        padding: 12px 30px !important;
+        font-size: 14px !important;
+        border-radius: 25px !important;
     }
 
     .footer-container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 20px 15px !important;
     }
 
     .footer-item {
-        margin: 8px 0;
+        flex: 1 1 100% !important;
+        margin: 12px 0 !important;
+        text-align: center !important;
     }
 
-    .social-icons {
-        justify-content: center;
-    }
-}
-
-/* === MOBILE RESPONSIVENESS === */
-@media (max-width: 1024px) {
-    .how-benefit {
-        padding: 25px 20px;
-        border-radius: 30px;
-        transform: translateY(-80px);
+    .footer-item h4 {
+        font-size: 15px !important;
     }
 
-    .benefit-container {
-        flex-direction: column;
-        gap: 30px;
-        height: auto;
-        /* allow flexible height */
+    .footer-item p {
+        font-size: 13px !important;
     }
 
-    .benefit-text h2 {
-        font-size: 1.8rem;
-    }
-
-    .benefit-text p {
-        font-size: 14px;
-        max-width: 100%;
-    }
-
-    .benefit-icon {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .icon-track {
-        gap: 15px;
-        width: max-content;
-        /* ensure proper scrolling */
-    }
-
-    .icon-wrapper img {
-        height: 150px;
-        /* smaller icons */
-        width: auto;
-    }
-
-    .text-track {
-        top: 90%;
-        gap: 20px;
-    }
-
-    .benefit-badge {
-        font-size: 13px;
-        padding: 8px 15px;
+    .footer-bottom {
+        font-size: 11px !important;
+        padding-top: 6px !important;
     }
 }
 
-@media (max-width: 768px) {
-    .how-benefit {
-        padding: 20px 15px;
-        border-radius: 25px;
-        transform: translateY(-60px);
+/* ==========================================
+   TABLET (768px - 1023px)
+   ========================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-header {
+        width: 88% !important;
+        padding: 14px 22px !important;
     }
-
-    .benefit-text h2 {
-        font-size: 1.6rem;
-        text-align: center;
-    }
-
-    .benefit-text p {
-        font-size: 13px;
-        text-align: center;
-    }
-
-    .benefit-container {
-        gap: 20px;
-    }
-
-    /* Make benefit-icon take full width */
-    .benefit-icon {
-        width: 100%;
-        overflow: hidden;
-        height: auto;
-        position: relative;
-    }
-
-    /* Combine icon-track and text-track scrolling */
-    .icon-track,
-    .text-track {
-        display: flex;
-        gap: 15px;
-        width: max-content;
-        animation: moveRight 12s linear infinite;
-        /* slower for mobile */
-    }
-
-    /* Adjust icon sizes */
-    .icon-wrapper img {
-        height: 120px;
-        width: auto;
-    }
-
-    /* Position text-track inline below icons */
-    .text-track {
-        position: relative;
-        /* remove absolute positioning */
-        top: 0;
-        transform: none;
-        gap: 10px;
-        align-items: center;
-        margin-left: 20px;
-        /* small spacing */
-    }
-
-    .benefit-badge {
-        font-size: 12px;
-        padding: 6px 12px;
-        white-space: nowrap;
-    }
-}
-
-@media (max-width: 480px) {
-    .how-benefit {
-        padding: 15px 10px;
-        transform: translateY(-85px);
-        border-radius: 20px;
-    }
-
-    .benefit-text h2 {
-        font-size: 1.4rem;
-    }
-
-    .benefit-text p {
-        font-size: 12px;
-        margin: 15px 0;
-    }
-
-    .benefit-icon {
-        height: 150px;
-    }
-
-    .icon-wrapper img {
-        height: 90px;
-    }
-
-    .benefit-badge {
-        font-size: 11px;
-        padding: 5px 10px;
-    }
-
-    .icon-track,
-    .text-track {
-        gap: 10px;
-        animation: moveRight 15s linear infinite;
-        /* slower on very small screens */
-    }
-}
-
-
-/* ===========================
-   MOBILE MEDIUM (375px - 575px)
-   =========================== */
-@media (min-width: 375px) and (max-width: 575px) {
-    .banner {
-        width: 100%;
-        margin: 10px 0;
-        border-radius: 15px;
-        /* min-height: 80vh; */
-    }
-
-    .banner .inner-frame {
-        inset: 10px;
-        border-radius: 15px;
-        border-top-left-radius: 60px;
-        border-bottom-right-radius: 60px;
-    }
-
-    .pinstripes {
-        inset: 10px;
-    }
-
-    .banner-content h1 {
-        font-size: 1.9rem;
-    }
-
-    .banner-content h1 span {
-        font-size: 1.6rem;
-    }
-
-    .subtitle {
-        font-size: 0.85rem;
-    }
-
-   
 
     .logo img {
-        height: 26px;
+        height: 32px !important;
     }
 
-    .who-we-are {
-        padding: 30px 20px;
-        /* width: 92%; */
-        overflow: hidden;
-        margin-top: -80px;
-        height: 75dvh;
-        transform: translateY(92px);
+    .main-header .nav ul {
+        gap: 18px !important;
     }
 
-    .our-services {
-        padding: 30px 20px;
+    .main-header .nav a {
+        font-size: 15px !important;
     }
 
-    .who-text h2,
-    .benefit-text h2,
-    .our-services h2 {
-        font-size: 1.4rem;
-    }
-
-    .service-box h3 {
-        font-size: 1.1rem;
-    }
-
-    .banner-circular-bg {
-        width: 350px;
-        height: 300px;
-        bottom: -145px;
-    }
-}
-
-/* ===========================
-   MOBILE SMALL (< 375px)
-   =========================== */
-@media (max-width: 374px) {
     .banner {
-        width: 100%;
-        margin: 8px 0;
-        border-radius: 12px;
-        min-height: 75vh;
+        width: 98% !important;
+        border-radius: 28px !important;
     }
 
     .banner .inner-frame {
-        inset: 8px;
-        border-radius: 12px;
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-
-    .pinstripes {
-        inset: 8px;
-    }
-
-    .banner-content {
-        padding: 0 15px;
-    }
-
-    .subtitle {
-        font-size: 0.8rem;
+        inset: 16px !important;
     }
 
     .banner-content h1 {
-        font-size: 1.6rem;
+        font-size: 3rem !important;
     }
 
     .banner-content h1 span {
-        font-size: 1.4rem;
+        font-size: 2.4rem !important;
+    }
+
+    .btn-wrapper {
+        gap: 16px !important;
     }
 
     .btn-outline,
     .btn-filled {
-        padding: 9px 18px;
-        font-size: 0.85rem;
-    }
-
-    .logo img {
-        height: 24px;
-    }
-
-    .who-we-are,
-    .how-benefit {
-        padding: 25px 18px;
-        width: 94%;
-    }
-
-    .our-services {
-        padding: 25px 18px;
-    }
-
-    .who-text h2,
-    .benefit-text h2,
-    .our-services h2 {
-        font-size: 1.3rem;
-    }
-
-    .who-text p,
-    .benefit-text p {
-        font-size: 0.85rem;
-    }
-
-    .service-box {
-        padding: 15px;
-    }
-
-    .service-box h3 {
-        font-size: 1rem;
-    }
-
-    .service-box p {
-        font-size: 0.8rem;
+        padding: 14px 24px !important;
+        font-size: 15px !important;
     }
 
     .banner-circular-bg {
-        width: 300px;
-        height: 220px;
-        bottom: -60px;
+        width: 520px !important;
+        height: 360px !important;
+        bottom: -110px !important;
     }
 
-    .clients-section h2 {
-        font-size: 1.4rem;
+    /* Sections */
+    .who-we-are {
+        padding: 50px 40px !important;
     }
 
-    .logo-box {
-        flex: 0 0 130px;
-        height: 90px;
-        font-size: 0.9rem;
+    .who-container {
+        gap: 35px !important;
+    }
+
+    .who-text h2 {
+        font-size: 1.75rem !important;
+    }
+
+    .our-services {
+        padding: 50px 40px !important;
+    }
+
+    .our-services h2 {
+        font-size: 1.75rem !important;
+    }
+
+    .service-box h3 {
+        font-size: 22px !important;
+    }
+
+    .how-benefit {
+        padding: 50px 40px !important;
+    }
+
+    .benefit-text h2 {
+        font-size: 1.75rem !important;
+    }
+
+    .icon-wrapper img {
+        height: 200px !important;
+    }
+}
+
+/* ==========================================
+   HD SCREENS (1024px - 1439px)
+   Includes: 1366x768, 1280x720
+   ========================================== */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .main-header {
+        width: 68% !important;
+        padding: 14px 26px !important;
+        top: 9% !important;
+    }
+
+    .logo img {
+        height: 34px !important;
+    }
+
+    .banner {
+        width: 96% !important;
+        border-radius: 34px !important;
+    }
+
+    .banner-content {
+        max-width: 760px !important;
+        padding: 0 22px !important;
+    }
+
+    .banner-content h1 {
+        font-size: 3.6rem !important;
+    }
+
+    .banner-content h1 span {
+        font-size: 3rem !important;
+    }
+
+    .btn-wrapper {
+        gap: 18px !important;
+    }
+
+    .banner-circular-bg {
+        width: 620px !important;
+        height: 430px !important;
+    }
+
+    .who-we-are {
+        padding: 55px 60px !important;
+        width: 94% !important;
+    }
+
+    .who-container {
+        gap: 45px !important;
+    }
+
+    .who-text h2 {
+        font-size: 1.9rem !important;
+    }
+
+    .who-text p {
+        font-size: 15px !important;
+    }
+
+    .our-services {
+        padding: 55px 60px !important;
+    }
+
+    .our-services h2 {
+        font-size: 1.9rem !important;
+    }
+
+    .services-container {
+        gap: 45px !important;
+    }
+
+    .service-box h3 {
+        font-size: 24px !important;
+    }
+
+    .service-box p {
+        font-size: 15px !important;
+    }
+
+    .how-benefit {
+        padding: 55px 60px !important;
+        width: 94% !important;
+    }
+
+    .benefit-text h2 {
+        font-size: 1.9rem !important;
+    }
+
+    .benefit-text p {
+        font-size: 15px !important;
+    }
+
+    .icon-track {
+        width: 340px !important;
     }
 
     .get-in-touch h2 {
-        font-size: 1.5rem;
+        font-size: 32px !important;
     }
 
-    .footer-bottom {
-        font-size: 0.75rem;
+    .email-form input {
+        width: 380px !important;
+    }
+}
+
+/* ==========================================
+   FULL HD / 1080p SCREENS (1440px - 1919px)
+   Includes: 1920x1080, 1680x1050
+   ========================================== */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .main-header {
+        width: 58% !important;
+        padding: 16px 30px !important;
+        top: 10% !important;
+        border-radius: 18px !important;
+    }
+
+    .logo img {
+        height: 38px !important;
+    }
+
+    .main-header .nav ul {
+        gap: 32px !important;
+    }
+
+    .banner {
+        width: 96% !important;
+        border-radius: 38px !important;
+    }
+
+    .banner .inner-frame {
+        inset: 20px !important;
+        border-radius: 28px !important;
+        border-top-left-radius: 140px !important;
+        border-bottom-right-radius: 140px !important;
+    }
+
+    .banner-content {
+        max-width: 860px !important;
+        padding: 0 32px !important;
+    }
+
+    .subtitle {
+        font-size: 1.05rem !important;
+        margin-bottom: 14px !important;
+    }
+
+    .banner-content h1 {
+        font-size: 4.4rem !important;
+    }
+
+    .banner-content h1 span {
+        font-size: 3.8rem !important;
+    }
+
+    .btn-wrapper {
+        gap: 22px !important;
+    }
+
+    .btn-outline,
+    .btn-filled {
+        padding: 14px 32px !important;
+        font-size: 17px !important;
+    }
+
+    .banner-circular-bg {
+        width: 880px !important;
+        height: 620px !important;
+        bottom: -320px !important;
+    }
+
+    .who-we-are {
+        padding: 70px 90px !important;
+        width: 93% !important;
+        border-radius: 38px !important;
+    }
+
+    .who-container {
+        gap: 60px !important;
+        height: 350px !important;
+    }
+
+    .who-text h2 {
+        font-size: 2.2rem !important;
+    }
+
+    .who-text p {
+        font-size: 16px !important;
+        max-width: 520px !important;
+        margin: 18px 0 28px !important;
+    }
+
+    .our-services {
+        padding: 70px 90px !important;
+        border-radius: 38px !important;
+    }
+
+    .our-services h2 {
+        font-size: 2.2rem !important;
+        margin-bottom: 50px !important;
+    }
+
+    .services-container {
+        gap: 60px !important;
+    }
+
+    .service-box {
+        padding: 24px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .service-box h3 {
+        font-size: 28px !important;
+    }
+
+    .service-box p {
+        font-size: 17px !important;
+    }
+
+    .service-icon img {
+        height: 70px !important;
+    }
+
+    .services-image img {
+        height: 450px !important;
+    }
+
+    .how-benefit {
+        padding: 70px 90px !important;
+        width: 93% !important;
+        border-radius: 38px !important;
+    }
+
+    .benefit-container {
+        gap: 60px !important;
+        height: 350px !important;
+    }
+
+    .benefit-text h2 {
+        font-size: 2.2rem !important;
+    }
+
+    .benefit-text p {
+        font-size: 16px !important;
+        max-width: 540px !important;
+    }
+
+    .icon-track {
+        width: 440px !important;
+        gap: 28px !important;
+    }
+
+    .icon-wrapper img {
+        height: 280px !important;
+    }
+
+    .text-track {
+        gap: 50px !important;
+    }
+
+    .clients-section h2 {
+        font-size: 36px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .logo-box {
+        flex: 0 0 260px !important;
+        height: 180px !important;
+        font-size: 26px !important;
+    }
+
+    .get-in-touch h2 {
+        font-size: 38px !important;
+    }
+
+    .email-form input {
+        width: 450px !important;
+        padding: 18px !important;
+    }
+}
+
+/* ==========================================
+   LARGE / 4K SCREENS (1920px and above)
+   ========================================== */
+@media (min-width: 1920px) {
+    .main-header {
+        width: 56% !important;
+        padding: 18px 36px !important;
+        top: 10% !important;
+        border-radius: 20px !important;
+    }
+
+    .logo img {
+        height: 42px !important;
+    }
+
+    .main-header .nav ul {
+        gap: 36px !important;
+    }
+
+    .main-header .nav a {
+        font-size: 17px !important;
+    }
+
+    .banner {
+        width: 95% !important;
+        border-radius: 42px !important;
+        margin-bottom: -120px !important;
+    }
+
+    .banner .inner-frame {
+        inset: 22px !important;
+        border-radius: 32px !important;
+        border-top-left-radius: 150px !important;
+        border-bottom-right-radius: 150px !important;
+    }
+
+    .banner-content {
+        max-width: 920px !important;
+        padding: 0 40px !important;
+    }
+
+    .subtitle {
+        font-size: 1.15rem !important;
+    }
+
+    .banner-content h1 {
+        font-size: 4.8rem !important;
+    }
+
+    .banner-content h1 span {
+        font-size: 4.2rem !important;
+    }
+
+    .btn-wrapper {
+        gap: 24px !important;
+    }
+
+    .btn-outline,
+    .btn-filled {
+        padding: 16px 36px !important;
+        font-size: 18px !important;
+    }
+
+    .banner-circular-bg {
+        width: 1000px !important;
+        height: 700px !important;
+        bottom: -350px !important;
+    }
+
+    .who-we-are {
+        padding: 80px 110px !important;
+        width: 92% !important;
+        transform: translateY(150px) !important;
+    }
+
+    .who-container {
+        gap: 70px !important;
+        height: 400px !important;
+    }
+
+    .who-text h2,
+    .our-services h2,
+    .benefit-text h2 {
+        font-size: 2.4rem !important;
+    }
+
+    .our-services {
+        padding: 80px 110px !important;
+        margin: 100px auto !important;
+    }
+
+    .how-benefit {
+        padding: 80px 110px !important;
+        width: 92% !important;
+        transform: translateY(-150px) !important;
+    }
+
+    .clients-section h2 {
+        font-size: 40px !important;
+    }
+
+    .logo-box {
+        flex: 0 0 280px !important;
+        height: 200px !important;
+        font-size: 28px !important;
+    }
+
+    .get-in-touch h2 {
+        font-size: 42px !important;
+    }
+
+    .email-form input {
+        width: 500px !important;
+        padding: 20px 25px !important;
+    }
+}
+
+/* ==========================================
+   PORTRAIT MODE
+   ========================================== */
+@media (max-width: 1023px) and (orientation: landscape) {
+    .banner {
+        min-height: 100vh !important;
+        padding: 30px 0 !important;
+    }
+
+    .banner-content h1 {
+        font-size: 2.4rem !important;
+    }
+
+    .banner-content h1 span {
+        font-size: 2rem !important;
+    }
+
+    .who-container,
+    .benefit-container {
+        height: auto !important;
+        min-height: 200px !important;
+    }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+@media print {
+
+    .main-header,
+    .banner-circular-bg,
+    .pinstripes,
+    .about-pinstripes,
+    .our-pinstripes,
+    .get-in-touch,
+    .global-footer {
+        display: none !important;
     }
 }
