@@ -439,6 +439,7 @@
     .banner-circular-bg {
         width: 620px !important;
         height: 430px !important;
+        bottom: -32%;
     }
 
     .who-we-are {
@@ -463,7 +464,7 @@
     }
 
     .our-services h2 {
-        font-size: 1.9rem !important;
+        font-size:34px !important;
     }
 
     .services-container {

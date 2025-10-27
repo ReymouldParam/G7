@@ -412,12 +412,16 @@ section {
   /* max-width: 1200px; */
   margin: 80px auto;
   position: relative;
+  /* Needed for absolute positioning of the circle */
+  overflow: hidden;
+  /* Ensures the circular bg doesn't overflow section */
   z-index: 1;
 
 }
 
+
 .our-services h2 {
-  font-size: 2rem;
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 40px;
 }
@@ -431,11 +435,49 @@ section {
   justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
+  position: relative;
+  z-index: 2;
 }
 
+/* === CIRCULAR BACKGROUND (left side behind list) === */
+.service-circular-bg {
+  position: absolute;
+  left: -23%;
+  top: 50%;
+  transform: translate(-25%, -50%);
+  /* shifts slightly off-screen for a natural glow */
+  width: 900px;
+  height: 600px;
+  background: url('../IMAGES/circular-bg.png') center center no-repeat;
+  background-size: contain;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  animation: rotate-circular-bg 52s linear infinite;
+  box-shadow:
+    0 60px 120px 0 rgba(0, 32, 32, 0.25),
+    0 0 0 60px rgba(0, 128, 64, 0.03) inset;
+}
+
+@keyframes rotate-circular-bg {
+  from {
+    transform: translate(-25%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-25%, -50%) rotate(360deg);
+  }
+}
+
+/* === SERVICES LIST === */
 .services-list {
   flex: 1;
+  position: relative;
+  z-index: 2;
+  /* ensure above circle */
 }
+
 
 .service-box {
   background: #1a1c1d;
