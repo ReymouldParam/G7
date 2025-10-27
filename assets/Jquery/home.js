@@ -182,3 +182,40 @@ $(document).ready(function () {
     startRotation();
 });
 
+
+// ABOUT US SECTION  COUNTER  
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".count");
+    const speed = 200; // Smaller = faster animation
+
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute("data-target");
+            const updateCount = () => {
+                const current = +counter.innerText;
+                const increment = Math.ceil(target / speed);
+                if (current < target) {
+                    counter.innerText = current + increment;
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    };
+
+    // Run animation only when the section is visible
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.disconnect(); // run only once
+            }
+        });
+    }, { threshold: 0.4 });
+
+    const storySection = document.querySelector("#our-story");
+    observer.observe(storySection);
+});
+
