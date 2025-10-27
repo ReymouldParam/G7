@@ -369,7 +369,7 @@ body {
     }
 
     .email-form input {
-        width: 100%;
+        width: 80%;
         max-width: 100%;
         padding: 12px;
         font-size: 15px;

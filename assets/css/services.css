@@ -148,10 +148,18 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
+    .premium-tab {
+        height: 70px;
+        align-items: center;
+        /* padding-top: 10px; */
+    }
+
     .premium-card {
         flex-direction: column;
         text-align: center;
+
         padding: 35px;
+        height: 100%;
     }
 
     .premium-image {
