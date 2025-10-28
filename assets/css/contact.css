@@ -19,14 +19,34 @@
     display: flex;
     flex-wrap: wrap;
     width: 96%;
-    /* max-width: 1300px; */
-    background: linear-gradient(to bottom, #000 50%, #004d23);
+    background: linear-gradient(to bottom, #000 50%, #0B9444 100%);
+    background-size: 100% 200%;
+    /* double height for movement space */
+    background-position: center top;
     padding: 10px 60px;
     padding-top: 8%;
-    box-shadow: 0 0 30px rgba(0, 255, 100, 0.2);
+    box-shadow: 0 0 30px rgba(0, 255, 100, 0.4);
     margin-top: 10px;
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
+
+    /*  Smooth flowing up-down green gradient */
+    animation: greenFlow 6s ease-in-out infinite;
+}
+
+/* Flowing background animation */
+@keyframes greenFlow {
+    0% {
+        background-position: center top;
+    }
+
+    50% {
+        background-position: center bottom;
+    }
+
+    100% {
+        background-position: center top;
+    }
 }
 
 /* Left Section */

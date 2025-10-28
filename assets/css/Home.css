@@ -26,14 +26,14 @@
 .banner .inner-frame {
   position: absolute;
   inset: 18px;
-  border-radius: 30px;
+  border-radius: 35px;
   /* smooth radial gradient for subtle center brightness */
   background: radial-gradient(circle at center, rgba(3, 20, 25, 0.6), rgba(0, 12, 12, 1));
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55) inset, 0 10px 30px rgba(0, 0, 0, 0.2);
   z-index: 10;
   overflow: hidden;
-  border-top-left-radius: 130px;
-  border-bottom-right-radius: 130px;
+  border-top-left-radius: 135px;
+  border-bottom-right-radius: 135px;
 }
 
 
