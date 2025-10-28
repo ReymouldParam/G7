@@ -105,10 +105,11 @@
     }
 
     .banner-circular-bg {
-        width: 240px !important;
-        height: 170px !important;
-        bottom: -85px !important;
+        width: 100% !important;
+        height: 255px !important;
+        /* bottom: -85px !important; */
         opacity: 0.1 !important;
+        left: 110px;
     }
 
     /* Who We Are Mobile */
@@ -437,7 +438,7 @@
     }
 
     .banner-circular-bg {
-             width: 620px !important;
+        width: 620px !important;
         height: 450px !important;
         bottom: -70%;
         margin-left: -125px;
@@ -465,7 +466,7 @@
     }
 
     .our-services h2 {
-        font-size:34px !important;
+        font-size: 34px !important;
     }
 
     .services-container {
