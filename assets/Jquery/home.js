@@ -8,7 +8,7 @@ $(function () {
     ];
     let idx = 0;
     const $span = $(".clarity-animated");
-    const $circle = $(".service-circular-bg");
+    const $circle = $(".banner-circular-bg");
     const duration = 5000; // 5 seconds per phrase
 
     function nextText() {
@@ -24,7 +24,7 @@ $(function () {
             .css({ animation: 'none' }) // reset animation
             .outerWidth(); // force reflow
         $circle.css({
-            animation: `rotate-circular-bg 1s ease-in-out forwards`
+            animation: `rotate-circular-bg 3.5s ease-in-out forwards`
         });
 
         idx = (idx + 1) % phrases.length;

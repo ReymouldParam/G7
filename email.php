@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST['email'];
 
 
-    $to = "shekar.sanda@shekarandco.com";
+    $to = "contact@g7consultancy.in,shekars@g7consultancy.in";
     $subject = "Email enquiry from G7 website";
     $body = "Email: $email";
 

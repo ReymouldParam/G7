@@ -189,6 +189,7 @@
     font-family: "Poppins", sans-serif;
     width: 96%;
     margin: 50px auto;
+    height: 85dvh;
     border-bottom-left-radius: 100px;
     border-top-right-radius: 100px;
 }
@@ -237,6 +238,7 @@
     align-items: stretch;
     gap: 30px;
     flex-wrap: wrap;
+    margin-top: 10%;
 }
 
 /* ===== Boxes ===== */
@@ -254,6 +256,8 @@
     transition: all 0.4s ease;
     box-shadow: inset 0 0 20px rgba(0, 255, 132, 0.05);
     backdrop-filter: blur(4px);
+    box-shadow: 0 0 25px rgba(0, 255, 132, 0.35);
+    border-color: #00ff84;
 }
 
 .g7-box:hover {
@@ -277,6 +281,38 @@
     .g7-container h2 {
         font-size: 1.6rem;
     }
+}
+
+
+/* ==============================
+   FLOATING BOX ANIMATION
+================================= */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply floating animation with staggered timing */
+.g7-box {
+    animation: floatUpDown 4.5s ease-in-out infinite;
+}
+
+/* make them move opposite to each other */
+.g7-box:nth-child(odd) {
+    animation-delay: 0s;
+}
+
+.g7-box:nth-child(even) {
+    animation-delay: 2.25s;
 }
 
 /************** Expert services */

@@ -423,6 +423,7 @@
     .banner-content {
         max-width: 760px !important;
         padding: 0 22px !important;
+        margin-top: -5%;
     }
 
     .banner-content h1 {
