@@ -83,7 +83,7 @@ body {
     display: flex;
     gap: 28px;
     align-items: center;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .main-header .nav a {
@@ -352,7 +352,7 @@ body {
 .pop-up-heading {
     font-size: 36px;
     font-weight: 700;
-    color: #004080;
+    color: #0B9444;
     /* Theme orange */
     margin-bottom: 15px;
 }
@@ -382,7 +382,7 @@ body {
 }
 
 .close-btn:hover {
-    background-color: #004080;
+    background-color: #0B9444;
 }
 
 /* ===== MOBILE RESPONSIVENESS ===== */

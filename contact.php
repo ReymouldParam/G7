@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Email setup
-    $to = "shekar.sanda@shekarandco.com";
+    $to = "naresh.narnapati@reymould.com";
     $subject = "New enquiry from G7 website";
     $body = "
         <h2>New Contact Enquiry</h2>
