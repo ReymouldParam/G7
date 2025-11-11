@@ -717,7 +717,8 @@
     .banner-circular-bg {
         width: 1000px !important;
         height: 700px !important;
-        bottom: -350px !important;
+        bottom: -72%;
+        left: 36%;
     }
 
     .who-we-are {
