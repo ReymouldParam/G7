@@ -17,7 +17,7 @@
 .premium-tab {
     flex: 1;
     text-align: center;
-    height: 55px;
+    /* height: 55px; */
     padding: 13px;
     margin-bottom: 10px;
     font-weight: 500;
@@ -28,6 +28,7 @@
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 2%;
 }
 
 .premium-tab:hover {
@@ -56,7 +57,7 @@
     box-shadow: 0 8px 30px rgba(0, 255, 132, 0.1);
     transition: all 0.4s ease;
     animation: premiumGradientFlow 8s ease infinite;
-    height: 430px;
+    height: 100%;
 }
 
 .premium-card:hover {
@@ -149,7 +150,7 @@
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
     .premium-tab {
-        height: 70px;
+        /* height: 70px; */
         align-items: center;
         /* padding-top: 10px; */
     }
@@ -189,7 +190,7 @@
     font-family: "Poppins", sans-serif;
     width: 96%;
     margin: 50px auto;
-    height: 85dvh;
+    /* height: 85dvh; */
     border-bottom-left-radius: 100px;
     border-top-right-radius: 100px;
 }

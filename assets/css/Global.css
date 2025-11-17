@@ -70,7 +70,7 @@ body {
 
 /* image logo */
 .logo img {
-    height: 35px;
+    height: 50px;
     /* adjust height as needed */
     width: auto;
     /* maintain aspect ratio */
@@ -298,11 +298,13 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 15px !important;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-icons i {
-    font-size: 18px;
+    font-size: 26px;
     cursor: pointer;
     color: white;
     transition: color 0.3s;
@@ -384,6 +386,75 @@ body {
 .close-btn:hover {
     background-color: #0B9444;
 }
+
+
+/********************* whatsapp container */
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    text-align: right;
+    height: 60px;
+    z-index: 100000;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.whatsapp-container i {
+    font-size: 48px;
+    color: #25D366;
+    justify-content: flex-end;
+    animation: whatsappbeat 1.5s infinite;
+    transition: transform 0.3s ease;
+}
+
+@keyframes whatsappbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.call-us-float {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.call-us-link {
+    display: flex;
+    align-items: center;
+    background-color: #0B9444;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.call-us-link i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.call-us-link:hover {
+    background-color: #084b85;
+    transform: scale(1.05);
+}
+
 
 /* ===== MOBILE RESPONSIVENESS ===== */
 @media (max-width: 1024px) {

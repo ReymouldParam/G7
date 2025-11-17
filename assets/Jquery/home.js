@@ -1,10 +1,12 @@
 // ********************* Home Page's Banner Section Animation ***********
 $(function () {
     const phrases = [
-        "Business Clarity",
-        "Financial Clarity",
-        "Career Clarity",
-        "Growth Clarity"
+        "Income Tax",
+        "Goods and Services Tax",
+        "Business Advisory and CFO Services",
+        "Due Diligence and Valuation Services",
+        "Financial Reporting Advisory",
+        "Secretarial and Business Setup Services"
     ];
     let idx = 0;
     const $span = $(".clarity-animated");
@@ -38,21 +40,29 @@ $(function () {
 // ****************************** Home Page Services Functionality 
 $(document).ready(function () {
     const serviceData = {
-        Cfo: {
+        income: {
             img: "assets/IMAGES/Services-Container-img1.png",
-            text: "The CFO oversees financial planning, maintains reports, and manages financial risks."
+            text: "Comprehensive tax planning and compliance to optimize your financial outcomes"
         },
-        Bussiness: {
+        goods: {
             img: "assets/IMAGES/Service-Container-img2.png",
-            text: "Our support services streamline your business operations for productivity and scalability."
+            text: "End-to-end GST registration, filing, and advisory for seamless compliance"
         },
-        Entity: {
+        business: {
             img: "assets/IMAGES/Service-Container-img3.png",
-            text: "We help organizations restructure efficiently for optimized performance and compliance."
+            text: "Strategic financial guidance to strengthen operations and drive growth"
         },
-        Fund: {
+        diligence: {
+            img: "assets/IMAGES/financial-service.jpg",
+            text: "Accurate financial assessments to support informed investments and decisions"
+        },
+        fund: {
             img: "assets/IMAGES/Service-Container-img4.png",
-            text: "We help organizations restructure efficiently for optimized performance and compliance."
+            text: "Expert support to ensure accurate, compliant, and timely financial statements"
+        },
+        secreterial: {
+            img: "assets/IMAGES/secreterial-img.jpg",
+            text: "Hassle-free company formation and regulatory compliance management"
         },
 
     };
