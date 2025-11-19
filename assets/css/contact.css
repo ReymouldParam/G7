@@ -32,6 +32,8 @@
 
     /*  Smooth flowing up-down green gradient */
     animation: greenFlow 6s ease-in-out infinite;
+    padding-top: 10%;
+
 }
 
 /* Flowing background animation */
