@@ -59,7 +59,7 @@
 
 /* image style */
 .image-blog {
-    /* width: 100%; */
+    width: 100%;
     height: auto;
     border-radius: 15px;
 }
@@ -237,7 +237,7 @@ hr {
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #5f5454;
-    height: 100vh;
+    height: fit-content;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -376,7 +376,7 @@ hr {
     color: var(--text-color-gray);
     font-size: 14px;
     line-height: 1.6;
-    /* margin-top: 2%; */
+
 }
 
 .blog-container-card.active .line {
@@ -419,6 +419,7 @@ hr {
 .share-popover a {
     margin: 0 4px;
     display: inline-block;
+    font-size: 18px;
 }
 
 .share-popover img {
