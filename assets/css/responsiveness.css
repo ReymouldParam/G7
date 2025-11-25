@@ -538,6 +538,7 @@
 
     .banner-content h1 {
         font-size: 4.4rem !important;
+        margin-top: 30px;
     }
 
     .banner-content h1 span {
@@ -557,7 +558,8 @@
     .banner-circular-bg {
         width: 880px !important;
         height: 620px !important;
-        bottom: -320px !important;
+        bottom: -600px !important;
+        left: 34% !important;
     }
 
     .who-we-are {
